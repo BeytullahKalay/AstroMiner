@@ -20,8 +20,8 @@ MonoBehaviour:
   - RockType: 1
     RockSprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
     ObjectToSpawn: {fileID: 1785512077899423377, guid: bb293039d13cfff42a8437f98995c629, type: 3}
-    spawnAmountMinMax: {x: 1, y: 3}
+    spawnAmountMinMax: {x: 1, y: 2}
   - RockType: 2
     RockSprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
     ObjectToSpawn: {fileID: 4361259415758223722, guid: 6eba8b7a44898c2458893acee8edc471, type: 3}
-    spawnAmountMinMax: {x: 1, y: 3}
+    spawnAmountMinMax: {x: 1, y: 2}
