@@ -95,8 +95,9 @@ GameObject:
   - component: {fileID: 7468486068581199093}
   - component: {fileID: 7468486068581199092}
   - component: {fileID: 7468486068581199095}
-  - component: {fileID: 7468486068581199094}
+  - component: {fileID: 5083875720521287546}
   - component: {fileID: 7468486068581199113}
+  - component: {fileID: 6768670036704305771}
   m_Layer: 6
   m_Name: Rock
   m_TagString: Untagged
@@ -198,7 +199,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.984375, y: 0.984375}
   m_EdgeRadius: 0
---- !u!114 &7468486068581199094
+--- !u!114 &5083875720521287546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,12 +208,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7468486068581199112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee67b7902c2b03f4d9adb3583437de4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 1995133d4fb76124caa873f5d61a0516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rockFog: {fileID: 7468486068581199113}
-  rockSprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
-  rockHealth: 100
 --- !u!114 &7468486068581199113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,3 +224,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fogSpriteRenderer: {fileID: 7468486067541755915}
+--- !u!114 &6768670036704305771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468486068581199112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 916cf228ea47f4048806ca77f159e645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emptyRockPickChance: 0.5
+  blueRockPickChance: 0.75
+  yellowRockPickChance: 1

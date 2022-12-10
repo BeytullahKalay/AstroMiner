@@ -53,7 +53,7 @@ public class GridSystem : MonoBehaviour
                 var rock = Instantiate(objectToSpawn, new Vector3(xPosition, yPosition, 0), Quaternion.identity);
 
                 // assign position values to the rock
-                rock.GetComponent<Rock>().SetGridPosition(gridIndexX, gridIndexY);
+                rock.GetComponent<RockPositioning>().SetGridPosition(gridIndexX, gridIndexY);
                 
                 // parenting
                 rock.transform.SetParent(parent.transform);
@@ -66,7 +66,6 @@ public class GridSystem : MonoBehaviour
 
     public GameObject GetRockFromGrid(GridPosition gripPosition)
     {
-        
         return _grids[gripPosition.x, gripPosition.y];
     }
 

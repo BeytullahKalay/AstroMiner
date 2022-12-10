@@ -1,23 +1,19 @@
-using TMPro;
 using UnityEngine;
 
 public abstract class Rock : MonoBehaviour
 {
-    [SerializeField] private RockFog rockFog;
-    [SerializeField] private Sprite rockSprite;
     [SerializeField] private int rockHealth = 100;
 
-    private GridPosition _gridPosition;
-    
+    private RockFog _rockFog;
 
-    private void Start()
+
+    public virtual void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = rockSprite;
+        _rockFog = GetComponent<RockFog>();
     }
 
     public void GetHit(int damage)
     {
-        Debug.Log("Rock get hit!!");
         DecreaseRockHealth(damage);
         CheckRockIsBreak();
     }
@@ -31,20 +27,20 @@ public abstract class Rock : MonoBehaviour
     {
         if (rockHealth <= 0)
         {
-            rockFog.OpenFogAround(_gridPosition);
+            _rockFog.OpenFogAround(GetComponent<RockPositioning>().GetGridPosition());
             DestroyRock();
         }
     }
 
-    public virtual void DestroyRock()
+    protected virtual void DestroyRock()
     {
-        Debug.Log("Rock Broke");
-        
         Destroy(gameObject);
     }
 
-    public void SetGridPosition(int x, int y)
+
+
+    private void SetSprite(Sprite sprite)
     {
-        _gridPosition = new GridPosition(x, y);
+        GetComponent<SpriteRenderer>().sprite = sprite;
     }
 }

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622713ad8f9ece6449afbb43e5f69a0f, type: 3}
+  m_Name: RockType
+  m_EditorClassIdentifier: 
+  Materials:
+  - RockType: 0
+    RockSprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
+    ObjectToSpawn: {fileID: 0}
+    spawnAmountMinMax: {x: 0, y: 0}
+  - RockType: 1
+    RockSprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
+    ObjectToSpawn: {fileID: 1785512077899423377, guid: bb293039d13cfff42a8437f98995c629, type: 3}
+    spawnAmountMinMax: {x: 1, y: 3}
+  - RockType: 2
+    RockSprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
+    ObjectToSpawn: {fileID: 4361259415758223722, guid: 6eba8b7a44898c2458893acee8edc471, type: 3}
+    spawnAmountMinMax: {x: 1, y: 3}

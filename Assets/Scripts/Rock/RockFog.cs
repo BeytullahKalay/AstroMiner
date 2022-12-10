@@ -20,7 +20,7 @@ public class RockFog : MonoBehaviour
         }
 
         // Left grid
-        if (gridPosition.x >= 0 && _gridSystem.GetRockFromGrid(gridPosition.LeftGrid()))
+        if (gridPosition.x > 0 && _gridSystem.GetRockFromGrid(gridPosition.LeftGrid()))
         {
             _gridSystem.GetRockFromGrid(gridPosition.LeftGrid()).GetComponent<RockFog>().OpenSelfFog();
         }
