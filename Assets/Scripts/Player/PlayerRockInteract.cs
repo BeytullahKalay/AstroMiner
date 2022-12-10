@@ -27,10 +27,9 @@ public class PlayerRockInteract : MonoBehaviour
         
         if (hit.collider != null)
         {
-            Debug.Log(hit.transform.name);
             if (hit.collider.GetComponent<Rock>())
             {
-                hit.collider.GetComponent<EmptyRock>().GetHit(damageToRock);
+                hit.collider.GetComponent<Rock>().GetHit(damageToRock);
 
                 CalculateNextHitTime();
 
