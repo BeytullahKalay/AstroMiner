@@ -17,9 +17,15 @@ public class GameManager : MonoBehaviour
     }
 
     [SerializeField] private RockTypeHolder rockTypeHolder;
+    [SerializeField] private TileSpriteHolder tileSpriteHolder;
 
     public RockMaterial GetMaterial(RockType rockType)
     {
         return rockTypeHolder.GetRockMaterial(rockType);
+    }
+
+    public TileSpriteHolder GetTileSpriteHolder()
+    {
+        return tileSpriteHolder;
     }
 }
