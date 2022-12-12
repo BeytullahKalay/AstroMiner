@@ -45,8 +45,8 @@ public class RockFog : MonoBehaviour
         fogSpriteRenderer.material.color = c;
     }
 
-    private void OnDestroy()
-    {
-        Destroy(fogSpriteRenderer.material);
-    }
+    // private void OnDestroy()
+    // {
+    //     Destroy(fogSpriteRenderer.material);
+    // }
 }

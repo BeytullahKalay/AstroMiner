@@ -1,21 +1,14 @@
 using UnityEngine;
+using System;
 
 public abstract class Rock : MonoBehaviour
 {
     [SerializeField] private int rockHealth = 100;
 
-    private RockFog _rockFog;
-
-
-    public virtual void Start()
-    {
-        _rockFog = GetComponent<RockFog>();
-    }
-
-    public void GetHit(int damage)
+    public void GetHit(int damage, Vector3 rockPosition, Action destroyAction)
     {
         DecreaseRockHealth(damage);
-        CheckRockIsBreak();
+        CheckRockIsBreak(rockPosition,destroyAction);
     }
 
     private void DecreaseRockHealth(int damage)
@@ -23,24 +16,19 @@ public abstract class Rock : MonoBehaviour
         rockHealth -= damage;
     }
 
-    private void CheckRockIsBreak()
+    private void CheckRockIsBreak(Vector3 rockPosition,Action destroyAction)
     {
         if (rockHealth <= 0)
         {
-            _rockFog.OpenFogAround(GetComponent<RockPositioning>().GetGridPosition());
-            DestroyRock();
+            //_rockFog.OpenFogAround(GetComponent<RockPositioning>().GetGridPosition());
+            //DestroyRock(transform.position);
+            OnDestroyRock(rockPosition);
+            destroyAction?.Invoke();
         }
     }
 
-    protected virtual void DestroyRock()
+    protected virtual void OnDestroyRock(Vector3 spawnObjectPosition)
     {
-        Destroy(gameObject);
-    }
-
-
-
-    private void SetSprite(Sprite sprite)
-    {
-        GetComponent<SpriteRenderer>().sprite = sprite;
+        Debug.Log("Destroyed");
     }
 }
