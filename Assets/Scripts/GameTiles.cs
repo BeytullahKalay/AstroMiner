@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -46,6 +45,7 @@ public class GameTiles : MonoBehaviour {
 				Name = localPlace.x + "," + localPlace.y,
 				RockType = rockTypePicker.SelectRockType(),
 				Health = 100,
+				RockFog = gameObject.AddComponent<RockFog>()
 			};
 
 			tiles.Add(tile.LocalPlace, tile);

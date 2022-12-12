@@ -15,4 +15,6 @@ public class WorldTile {
     public Rock RockType { get; set; }
     
     public int Health { get; set; }
+    
+    public RockFog RockFog { get; set; }
 }

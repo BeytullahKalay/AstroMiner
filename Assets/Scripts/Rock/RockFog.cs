@@ -2,51 +2,34 @@ using UnityEngine;
 
 public class RockFog : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer fogSpriteRenderer;
-
-    private GridSystem _gridSystem;
-    
-    private void Start()
-    {
-        _gridSystem = GridSystem.Instance;
-    }
-
-    public void OpenFogAround(GridPosition gridPosition)
-    {
-        // Right grid
-        if (gridPosition.x < _gridSystem.GetTotalWidth() - 1 && _gridSystem.GetRockFromGrid(gridPosition.RightGrid()))
-        {
-            _gridSystem.GetRockFromGrid(gridPosition.RightGrid()).GetComponent<RockFog>().OpenSelfFog();
-        }
-
-        // Left grid
-        if (gridPosition.x > 0 && _gridSystem.GetRockFromGrid(gridPosition.LeftGrid()))
-        {
-            _gridSystem.GetRockFromGrid(gridPosition.LeftGrid()).GetComponent<RockFog>().OpenSelfFog();
-        }
-
-        // Up grid
-        if (gridPosition.y - 1 >= 0 && _gridSystem.GetRockFromGrid(gridPosition.UpGrid()))
-        {
-            _gridSystem.GetRockFromGrid(gridPosition.UpGrid()).GetComponent<RockFog>().OpenSelfFog();
-        }
-
-        // Down grid
-        if (gridPosition.y < _gridSystem.GetTotalHeight() - 1 && _gridSystem.GetRockFromGrid(gridPosition.DownGrid()))
-        {
-            _gridSystem.GetRockFromGrid(gridPosition.DownGrid()).GetComponent<RockFog>().OpenSelfFog();
-        }
-    }
-
-    private void OpenSelfFog()
-    {
-        Color c = fogSpriteRenderer.material.color;
-        c.a = 0;
-        fogSpriteRenderer.material.color = c;
-    }
-
-    // private void OnDestroy()
+    // private Tilemap _tilemap;
+    //
+    // private void Start()
     // {
-    //     Destroy(fogSpriteRenderer.material);
+    //     _tilemap = GameTiles.instance.Tilemap;
+    // }
+    //
+    // public void OpenFogAround(Vector3Int tilePosition)
+    // {
+    //     // if (_tilemap.GetTile(tilePosition - new Vector3Int(1,0,0))) // Left
+    //     // {
+    //     //     _tilemap.SetTile(tilePosition - new Vector3Int(1,0,0),null);
+    //     // }
+    //     //
+    //     // if (_tilemap.GetTile(tilePosition + new Vector3Int(1,0,0))) // Right
+    //     // {
+    //     //     _tilemap.SetTile(tilePosition + new Vector3Int(1,0,0),null);
+    //     // }
+    //     //
+    //     // if (_tilemap.GetTile(tilePosition + new Vector3Int(0,1,0))) // Up
+    //     // {
+    //     //     _tilemap.SetTile(tilePosition + new Vector3Int(0,1,0),null);
+    //     // }
+    //     //
+    //     // if (_tilemap.GetTile(tilePosition + new Vector3Int(0,1,0))) // Down
+    //     // {
+    //     //     _tilemap.SetTile(tilePosition + new Vector3Int(0,1,0),null);
+    //     // }
+    //     
     // }
 }

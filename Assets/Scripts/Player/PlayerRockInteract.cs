@@ -32,39 +32,48 @@ public class PlayerRockInteract : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(raycastPoint.position, movementVector2, hitDistance, whatIsRock);
 
+        OnHitARock(movementVector2, hit);
+    }
+
+    private void OnHitARock(Vector2 movementVector2, RaycastHit2D hit)
+    {
         if (hit.collider != null)
         {
             var rayPosition = hit.point;
             Vector3Int tilePos = tilemap.WorldToCell(rayPosition);
 
 
-            if (tilemap.GetTile(tilePos))
-            {
-                HitTile(tilePos);
-                AddBounceBackForce(movementVector2);
-                CalculateNextHitTime();
-            }
-            else if (tilemap.GetTile(tilePos - new Vector3Int(1, 0, 0)))
-            {
-                tilePos -= new Vector3Int(1, 0, 0);
-
-                HitTile(tilePos);
-                AddBounceBackForce(movementVector2);
-                CalculateNextHitTime();
-            }
-            else if (tilemap.GetTile(tilePos - new Vector3Int(0, 1, 0)))
-            {
-                tilePos -= new Vector3Int(0, 1, 0);
-
-                HitTile(tilePos);
-                AddBounceBackForce(movementVector2);
-                CalculateNextHitTime();
-            }
-            else
-            {
-                Debug.LogError("Tile no found!");
-            }
+            IsHit(movementVector2, tilePos);
         }
+    }
+
+    private void IsHit(Vector2 movementVector2, Vector3Int tilePos)
+    {
+        if (tilemap.GetTile(tilePos))
+        {
+            HitActions(movementVector2, tilePos);
+        }
+        else if (tilemap.GetTile(tilePos - new Vector3Int(1, 0, 0)))
+        {
+            tilePos -= new Vector3Int(1, 0, 0);
+            HitActions(movementVector2, tilePos);
+        }
+        else if (tilemap.GetTile(tilePos - new Vector3Int(0, 1, 0)))
+        {
+            tilePos -= new Vector3Int(0, 1, 0);
+            HitActions(movementVector2, tilePos);
+        }
+        else
+        {
+            Debug.LogError("Tile no found!");
+        }
+    }
+
+    private void HitActions(Vector2 movementVector2, Vector3Int tilePos)
+    {
+        HitTile(tilePos);
+        AddBounceBackForce(movementVector2);
+        CalculateNextHitTime();
     }
 
     private void HitTile(Vector3Int tilePos)
