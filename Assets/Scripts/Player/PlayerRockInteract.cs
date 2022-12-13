@@ -78,8 +78,7 @@ public class PlayerRockInteract : MonoBehaviour
 
     private void HitTile(Vector3Int tilePos)
     {
-        var worldLocation = _tiles[tilePos].WorldLocation;
-        _tiles[tilePos].RockType.GetHit(damageToRock, worldLocation, () => DestroyTile(tilePos));
+        _tiles[tilePos].Rock.GetHit(damageToRock, _tiles[tilePos], () => DestroyTile(tilePos));
     }
 
     private void CalculateNextHitTime()

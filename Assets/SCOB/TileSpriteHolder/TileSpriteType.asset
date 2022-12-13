@@ -12,23 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ce7135adef4994eb1c8e6c52131aa8, type: 3}
   m_Name: TileSpriteType
   m_EditorClassIdentifier: 
-  upLeft:
-  - {fileID: 2127531942, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  up:
-  - {fileID: -1012981042, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  midLeft:
-  - {fileID: 1580555843, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  mid:
-  - {fileID: -1512140486, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  - {fileID: -107429951, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  - {fileID: -1874566196, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  - {fileID: 25879559, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  - {fileID: 1398148576, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  - {fileID: 26265691, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  - {fileID: 66367027, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  - {fileID: 463499742, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  - {fileID: -1968892213, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  downLeft:
-  - {fileID: -2115231111, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
-  down:
-  - {fileID: 1891617306, guid: 2a2b6e915d93b5d4193b5e36acd99683, type: 3}
+  yellow: {fileID: 11400000, guid: 0dfb0c4da82e2e245a246e1ae62bff76, type: 2}
+  blue: {fileID: 11400000, guid: cf4168c6ab006544ea84e2dde975a9b8, type: 2}

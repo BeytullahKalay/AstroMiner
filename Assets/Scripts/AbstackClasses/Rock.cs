@@ -1,14 +1,21 @@
 using UnityEngine;
 using System;
+using UnityEngine.Tilemaps;
 
 public abstract class Rock : MonoBehaviour
 {
     [SerializeField] private int rockHealth = 100;
 
-    public void GetHit(int damage, Vector3 rockPosition, Action destroyAction)
+    public virtual void Start()
+    {
+        
+    }
+
+
+    public void GetHit(int damage, WorldTile tile, Action destroyAction)
     {
         DecreaseRockHealth(damage);
-        CheckRockIsBreak(rockPosition,destroyAction);
+        CheckRockIsBreak(tile.WorldLocation, tile, destroyAction);
     }
 
     private void DecreaseRockHealth(int damage)
@@ -16,12 +23,11 @@ public abstract class Rock : MonoBehaviour
         rockHealth -= damage;
     }
 
-    private void CheckRockIsBreak(Vector3 rockPosition,Action destroyAction)
+    private void CheckRockIsBreak(Vector3 rockPosition, WorldTile tile, Action destroyAction)
     {
         if (rockHealth <= 0)
         {
-            //_rockFog.OpenFogAround(GetComponent<RockPositioning>().GetGridPosition());
-            //DestroyRock(transform.position);
+            tile.RockFog.OpenFogAround(GameTiles.instance.tiles);
             OnDestroyRock(rockPosition);
             destroyAction?.Invoke();
         }
@@ -29,6 +35,10 @@ public abstract class Rock : MonoBehaviour
 
     protected virtual void OnDestroyRock(Vector3 spawnObjectPosition)
     {
-        Debug.Log("Destroyed");
+    }
+
+    public virtual Tile GetTile()
+    {
+        return null;
     }
 }

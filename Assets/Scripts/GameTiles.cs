@@ -28,12 +28,15 @@ public class GameTiles : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	private void GetWorldTiles () 
+	private void GetWorldTiles ()
 	{
-        tiles = new Dictionary<Vector3Int, WorldTile>();
+		tiles = new Dictionary<Vector3Int, WorldTile>();
 		foreach (Vector3Int pos in Tilemap.cellBounds.allPositionsWithin)
 		{
 			var localPlace = new Vector3Int(pos.x, pos.y, pos.z);
+			var selectRockType = rockTypePicker.SelectRockType();
+			
+			selectRockType.Start(); // initialize rock for make tiles gettable
 
 			if (!Tilemap.HasTile(localPlace)) continue;
 			var tile = new WorldTile
@@ -43,11 +46,11 @@ public class GameTiles : MonoBehaviour {
 				TileBase = Tilemap.GetTile(localPlace),
 				TilemapMember = Tilemap,
 				Name = localPlace.x + "," + localPlace.y,
-				RockType = rockTypePicker.SelectRockType(),
+				Rock = selectRockType,
 				Health = 100,
-				RockFog = gameObject.AddComponent<RockFog>()
+				RockFog = new RockFog(localPlace,Tilemap,selectRockType.GetTile()),
 			};
-
+			
 			tiles.Add(tile.LocalPlace, tile);
 		}
 	}

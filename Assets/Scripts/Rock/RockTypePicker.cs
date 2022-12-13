@@ -12,6 +12,7 @@ public class RockTypePicker : MonoBehaviour
     public Rock SelectRockType()
     {
         var randVal = Random.value;
+        
         if (randVal < emptyRockPickChance)
         {
             // make rock empty

@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: 7468486068581199092}
   - component: {fileID: 7468486068581199095}
   - component: {fileID: 5083875720521287546}
-  - component: {fileID: 7468486068581199113}
   - component: {fileID: 6768670036704305771}
   m_Layer: 6
   m_Name: Rock
@@ -211,19 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1995133d4fb76124caa873f5d61a0516, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7468486068581199113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7468486068581199112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fcd1c1545f52c543b1bc648502c106d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fogSpriteRenderer: {fileID: 7468486067541755915}
 --- !u!114 &6768670036704305771
 MonoBehaviour:
   m_ObjectHideFlags: 0
