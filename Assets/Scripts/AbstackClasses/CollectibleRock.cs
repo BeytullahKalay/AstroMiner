@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using DG.Tweening;
 
 public class CollectibleRock : Rock
 {

@@ -18,22 +18,7 @@ public abstract class Rock : MonoBehaviour
     {
         DecreaseRockHealth(damage);
         CheckRockIsBreak(tile.WorldLocation, tile, destroyAction);
-        PlayHitEffect(tile);
-    }
-
-    private void PlayHitEffect(WorldTile tile)
-    {
-        Color c = tile.TilemapMember.color;
-        c.a = .5f;
-        float t = 0;
-        DOTween.To(() => t, x => t = x, 1, _hitFadeDuration).OnStart(() =>
-        {
-            tile.TilemapMember.SetColor(tile.LocalPlace, c);
-        }).OnComplete(() =>
-        {
-            c.a = 1;
-            tile.TilemapMember.SetColor(tile.LocalPlace, c);
-        });
+        PlayHitEffect(tile,_hitFadeDuration);
     }
 
     private void DecreaseRockHealth(int damage)
@@ -54,9 +39,28 @@ public abstract class Rock : MonoBehaviour
     protected virtual void OnDestroyRock(Vector3 spawnObjectPosition)
     {
     }
+    
+    private void PlayHitEffect(WorldTile tile, float hitFadeDuration)
+    {
+        Color c = tile.TilemapMember.color;
+        c.a = .5f; // make opacity half open
+        float t = 0;
+        DOTween.To(() => t, x => t = x, 1, hitFadeDuration)
+            .OnStart(() =>
+            {
+                tile.TilemapMember.SetColor(tile.LocalPlace, c);
+            })
+            .OnComplete(() =>
+            {
+                c.a = 1;
+                tile.TilemapMember.SetColor(tile.LocalPlace, c);
+            });
+    }
 
     public virtual Tile GetTile()
     {
         return null;
     }
+    
+    
 }

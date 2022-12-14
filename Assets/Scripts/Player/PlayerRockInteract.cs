@@ -6,7 +6,6 @@ public class PlayerRockInteract : MonoBehaviour
 {
     [SerializeField] private int damageToRock = 60;
     [SerializeField] private float hitAmountInOneSecond;
-    [SerializeField] private float hitDistance = 1;
     [SerializeField] private float bounceBackForce = 2f;
     [SerializeField] private Transform raycastPoint;
     [SerializeField] private LayerMask whatIsRock;
@@ -27,22 +26,19 @@ public class PlayerRockInteract : MonoBehaviour
     public void Interact(Vector2 movementVector2)
     {
         if (Time.time <= _nextInteractTime) return;
+        
+        RaycastHit2D hit = Physics2D.Linecast(raycastPoint.position, (Vector2)raycastPoint.position + movementVector2, whatIsRock);
 
-        Debug.DrawRay(raycastPoint.position, movementVector2, Color.red);
+        Debug.DrawLine(raycastPoint.position, (Vector2)raycastPoint.position + movementVector2, Color.red);
 
-        RaycastHit2D hit = Physics2D.Raycast(raycastPoint.position, movementVector2, hitDistance, whatIsRock);
-
-        OnHitARock(movementVector2, hit);
+        OnHitARock(movementVector2, hit,(Vector2)raycastPoint.position + movementVector2);
     }
 
-    private void OnHitARock(Vector2 movementVector2, RaycastHit2D hit)
+    private void OnHitARock(Vector2 movementVector2, RaycastHit2D hit,Vector3 rayEndPosition)
     {
         if (hit.collider != null)
         {
-            var rayPosition = hit.point;
-            Vector3Int tilePos = tilemap.WorldToCell(rayPosition);
-
-
+            Vector3Int tilePos = tilemap.WorldToCell(rayEndPosition);
             IsHit(movementVector2, tilePos);
         }
     }
@@ -52,20 +48,6 @@ public class PlayerRockInteract : MonoBehaviour
         if (tilemap.GetTile(tilePos))
         {
             HitActions(movementVector2, tilePos);
-        }
-        else if (tilemap.GetTile(tilePos - new Vector3Int(1, 0, 0)))
-        {
-            tilePos -= new Vector3Int(1, 0, 0);
-            HitActions(movementVector2, tilePos);
-        }
-        else if (tilemap.GetTile(tilePos - new Vector3Int(0, 1, 0)))
-        {
-            tilePos -= new Vector3Int(0, 1, 0);
-            HitActions(movementVector2, tilePos);
-        }
-        else
-        {
-            Debug.LogError("Tile no found!");
         }
     }
 

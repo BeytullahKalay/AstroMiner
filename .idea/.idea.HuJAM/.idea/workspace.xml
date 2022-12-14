@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="">
+    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="add: hit effect">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/cave/cavesofgallet_tiles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/cave/cavesofgallet_tiles.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteType.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteType.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/CollectibleRock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/CollectibleRock.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/Rock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/Rock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldTile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tiles/LevelRule.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/LevelRule.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRockInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRockInteract.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +19,27 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/870dcb826aa94138bd46a28dbdcf63809800/f9/d39860be/Tilemap.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Art/cave/cavesofgallet_tiles.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Art/cave/cavesofgallet_tiles.png.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SCOB/RockTypeHolder/RockTypeHolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AbstackClasses/CollectibleRock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/AbstackClasses/CollectibleRock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/AbstackClasses/CollectibleRock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/AbstackClasses/Rock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/AbstackClasses/Rock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/AbstackClasses/Rock.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AddRelativeForceOnStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameTiles.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Player/PlayerRockInteract.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Player/PlayerRockInteract.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rock/RockPositioning.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/WorldTile.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/ProjectSettings/EditorSettings.asset" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -93,7 +104,7 @@
       <workItem from="1670788261147" duration="2567000" />
       <workItem from="1670864230832" duration="6120000" />
       <workItem from="1670926955896" duration="11346000" />
-      <workItem from="1671016432730" duration="4247000" />
+      <workItem from="1671016432730" duration="15933000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
@@ -151,7 +162,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670940814734</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add: dotween plugin">
+      <created>1671024513866</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671024513866</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add: hit effect">
+      <created>1671024533601</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671024533601</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +206,8 @@
     <MESSAGE value="started: implementing fog open feature" />
     <MESSAGE value="modified: SampleScene.unity" />
     <MESSAGE value="add: Fog" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: Fog" />
+    <MESSAGE value="add: dotween plugin" />
+    <MESSAGE value="add: hit effect" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: hit effect" />
   </component>
 </project>

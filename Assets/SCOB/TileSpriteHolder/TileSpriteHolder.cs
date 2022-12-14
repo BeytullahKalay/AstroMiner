@@ -7,7 +7,6 @@ public class TileSpriteHolder : ScriptableObject
 {
     [SerializeField] private Tile yellow;
     [SerializeField] private Tile blue;
-    [SerializeField] private Tile gettingHitTile;
 
 
     public Tile GetYellowRockSprite()
@@ -18,10 +17,5 @@ public class TileSpriteHolder : ScriptableObject
     public Tile GetBlueRockSprite()
     {
         return blue;
-    }
-
-    public Tile GetGettingHitTile()
-    {
-        return gettingHitTile;
     }
 }
