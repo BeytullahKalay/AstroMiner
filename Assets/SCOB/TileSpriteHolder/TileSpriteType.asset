@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73ce7135adef4994eb1c8e6c52131aa8, type: 3}
   m_Name: TileSpriteType
   m_EditorClassIdentifier: 
-  yellow: {fileID: 11400000, guid: 0dfb0c4da82e2e245a246e1ae62bff76, type: 2}
-  blue: {fileID: 11400000, guid: cf4168c6ab006544ea84e2dde975a9b8, type: 2}
+  yellow: {fileID: 11400000, guid: 4c9e7d661581c324b95f60cb8513034d, type: 2}
+  blue: {fileID: 11400000, guid: 9480d9682e85e2c41b4612478ba51b30, type: 2}

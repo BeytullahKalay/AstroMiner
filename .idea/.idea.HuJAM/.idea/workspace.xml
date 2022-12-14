@@ -3,22 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BlueSpawnObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BlueSpawnObject.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/YellowSpawnObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/YellowSpawnObject.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/cave/cavesofgallet_tiles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/cave/cavesofgallet_tiles.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteType.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteType.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/CollectibleRock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/CollectibleRock.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/Rock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/Rock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameTiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameTiles.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRockInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRockInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rock/BlueRock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rock/BlueRock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rock/RockFog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rock/RockFog.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rock/RockTypePicker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rock/RockTypePicker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rock/YellowRock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rock/YellowRock.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WorldTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WorldTile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tiles/LevelRule.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tiles/LevelRule.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +92,8 @@
       <workItem from="1670786662938" duration="792000" />
       <workItem from="1670788261147" duration="2567000" />
       <workItem from="1670864230832" duration="6120000" />
-      <workItem from="1670926955896" duration="11047000" />
+      <workItem from="1670926955896" duration="11346000" />
+      <workItem from="1671016432730" duration="4247000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
@@ -149,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670870392549</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add: Fog">
+      <created>1670940814734</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670940814734</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +180,7 @@
     <MESSAGE value="add: sprites, tilemap, tilemap collisions, tile interactions and tile destroy actions feature" />
     <MESSAGE value="started: implementing fog open feature" />
     <MESSAGE value="modified: SampleScene.unity" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified: SampleScene.unity" />
+    <MESSAGE value="add: Fog" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: Fog" />
   </component>
 </project>
