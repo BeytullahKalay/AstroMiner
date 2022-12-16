@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using DG.Tweening;
 
-public class CollectibleRock : Rock
+public abstract class CollectibleRock : Rock
 {
     private RockMaterial _rockMaterial;
     protected RockType _type;

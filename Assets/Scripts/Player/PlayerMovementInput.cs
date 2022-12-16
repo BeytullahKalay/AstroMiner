@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerInput : MonoBehaviour,IMovementInput
+public class PlayerMovementInput : MonoBehaviour,IMovementInput
 {
     public Vector2 MovementInputVector { get; private set; }
 

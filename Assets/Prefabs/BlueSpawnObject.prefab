@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1785512077899423379}
   - component: {fileID: 1785512077899423376}
   - component: {fileID: -3866511652897147897}
+  - component: {fileID: 1923452030025561335}
   m_Layer: 0
   m_Name: BlueSpawnObject
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785512077899423377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.645795, y: 4.3769546, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -100,7 +101,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 57454604401966e4b8ebb111bdc0293d, type: 2}
@@ -137,3 +138,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody2D: {fileID: 1785512077899423379}
+--- !u!114 &1923452030025561335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785512077899423377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b017fd4f43840f4fab10636c40e94e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 3
+  minDistanceBetweenOrbAndPlayer: 3
