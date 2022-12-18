@@ -6,10 +6,13 @@ public class PlayerCollect : MonoBehaviour
 
     private ICollectInput _collectInputs;
 
+    private CollectLineRendererManager _collectLineRendererManager;
+
     private void Awake()
     {
         _collectibleTrigger = GetComponent<CollectibleTriggerActions>();
         _collectInputs = GetComponent<ICollectInput>();
+        _collectLineRendererManager = GetComponent<CollectLineRendererManager>();
     }
     
     private void Update()
@@ -24,10 +27,12 @@ public class PlayerCollect : MonoBehaviour
         if (Input.GetKeyDown(_collectInputs.ConnectInput))
         {
             orb.ConnectedActions?.Invoke(transform);
+            _collectLineRendererManager.CreateConnectedLineRenderer(transform,orb.transform);
         }
         else if (Input.GetKeyDown(_collectInputs.ReleaseInput))
         {
             orb.ReleasedActions?.Invoke();
+            // TODO: add remove line renderer function
         }
     }
 }

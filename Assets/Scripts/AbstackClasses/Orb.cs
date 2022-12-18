@@ -3,8 +3,9 @@ using UnityEngine;
 
 public abstract class Orb : MonoBehaviour, ICollectible
 {
-    [SerializeField] private float force = 5f;
+    [SerializeField] private float followForce = 5f;
     [SerializeField] private float minDistanceBetweenOrbAndPlayer = 2.5f;
+    [SerializeField] private float linearDrag = 2f;
 
     public Action<Transform> ConnectedActions;
     public Action ReleasedActions;
@@ -34,23 +35,23 @@ public abstract class Orb : MonoBehaviour, ICollectible
                 minDistanceBetweenOrbAndPlayer) return;
             
             var dir = (_playerTransform.position - transform.position).normalized;
-            _rigidbody.AddForce(dir * force);
+            _rigidbody.AddForce(dir * followForce);
         }
     }
 
 
     private void Connected(Transform playerTransform)
     {
-        Debug.Log("Connected");
         _playerTransform = playerTransform;
         _isConnected = true;
         _rigidbody.gravityScale = 0;
+        _rigidbody.drag = linearDrag;
     }
 
     private void Released()
     {
-        Debug.Log("Released");
         _isConnected = false;
         _rigidbody.gravityScale = 1;
+        _rigidbody.drag = 0;
     }
 }
