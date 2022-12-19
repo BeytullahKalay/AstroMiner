@@ -10,4 +10,9 @@ public class CollectCollider : MonoBehaviour
     {
         selectionCollider.radius = collectRadius;
     }
+
+    public float GetCollectRadius()
+    {
+        return collectRadius;
+    }
 }

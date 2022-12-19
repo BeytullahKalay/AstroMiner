@@ -1,12 +1,12 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SelectionImageController))]
-[RequireComponent(typeof(CollectibleTriggerActions))]
+[RequireComponent(typeof(CollectActions))]
 [RequireComponent(typeof(PlayerMovement))]
 [RequireComponent(typeof(PlayerRenderer))]
 [RequireComponent(typeof(PlayerRockInteract))]
 [RequireComponent(typeof(PlayerCollect))]
-[RequireComponent(typeof(CollectibleTriggerActions))]
+[RequireComponent(typeof(CollectActions))]
 [RequireComponent(typeof(ICollectInput))]
 public class Player : MonoBehaviour
 {
@@ -17,9 +17,9 @@ public class Player : MonoBehaviour
     private PlayerMovement _playerMovement;
     private PlayerRenderer _playerRenderer;
     private PlayerRockInteract _playerRockInteract;
-    private CollectibleTriggerActions _collectibleTriggerActions;
+    private CollectActions _collectActions;
     private ICollectInput _playerCollectInput;
-    private CollectibleTriggerActions _playerCollectibleTriggerActions;
+    private CollectActions _playerCollectActions;
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovement>();
         _playerRenderer = GetComponent<PlayerRenderer>();
         _playerRockInteract = GetComponent<PlayerRockInteract>();
-        _collectibleTriggerActions = GetComponent<CollectibleTriggerActions>();
+        _collectActions = GetComponent<CollectActions>();
     }
 
 
@@ -36,6 +36,6 @@ public class Player : MonoBehaviour
         _playerMovement.MovePlayer(_movementInput.MovementInputVector);
         _playerRenderer.RenderPlayer(_movementInput.MovementInputVector);
         _playerRockInteract.Interact(_movementInput.MovementInputVector);
-        selectionImageController.SetSelectionImagePosition(_collectibleTriggerActions.CollectibleObjects);
+        selectionImageController.SetSelectionImagePosition(_collectActions.CollectibleOrbs);
     }
 }

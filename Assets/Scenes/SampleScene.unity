@@ -695,6 +695,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc39f97d704f80f4da27f8d941347cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CollectibleOrbs: []
+  CollectedOrbs: []
 --- !u!114 &270677253
 MonoBehaviour:
   m_ObjectHideFlags: 0

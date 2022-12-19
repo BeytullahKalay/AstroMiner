@@ -1,57 +1,48 @@
-using System;
 using UnityEngine;
 
+[System.Serializable]
+[RequireComponent(typeof(OrbFollow))]
+[RequireComponent(typeof(OrbConnectAndRelease))]
 public abstract class Orb : MonoBehaviour, ICollectible
 {
-    [SerializeField] private float followForce = 5f;
-    [SerializeField] private float minDistanceBetweenOrbAndPlayer = 2.5f;
-    [SerializeField] private float linearDrag = 2f;
+    private bool _isCollected;
 
-    public Action<Transform> ConnectedActions;
-    public Action ReleasedActions;
+    private OrbFollow _orbFollow;
 
-    private bool _isConnected;
+    private OrbConnectAndRelease _orbConnectAndRelease;
 
     private Transform _playerTransform;
 
-    private Rigidbody2D _rigidbody;
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
-    }
-
-    private void Start()
-    {
-        ConnectedActions += Connected;
-        ReleasedActions += Released;
+        _orbFollow = GetComponent<OrbFollow>();
+        _orbConnectAndRelease = GetComponent<OrbConnectAndRelease>();
     }
 
     private void Update()
     {
-        if (_isConnected)
-        {
-            if (Vector2.Distance(_playerTransform.position, transform.position) <=
-                minDistanceBetweenOrbAndPlayer) return;
-            
-            var dir = (_playerTransform.position - transform.position).normalized;
-            _rigidbody.AddForce(dir * followForce);
-        }
+        _orbFollow.FollowThePlayer(_isCollected, _playerTransform);
     }
 
-
-    private void Connected(Transform playerTransform)
+    public void CallConnectedActions(Transform playerTransform, CollectActions collectActions)
     {
+        _orbConnectAndRelease.ConnectedActions?.Invoke(playerTransform, collectActions);
+
+        _isCollected = true;
+
         _playerTransform = playerTransform;
-        _isConnected = true;
-        _rigidbody.gravityScale = 0;
-        _rigidbody.drag = linearDrag;
     }
 
-    private void Released()
+    public void CallReleasedActions()
     {
-        _isConnected = false;
-        _rigidbody.gravityScale = 1;
-        _rigidbody.drag = 0;
+        _orbConnectAndRelease.ReleasedActions?.Invoke();
+
+        _isCollected = false;
+    }
+
+    public bool GetIsConnected()
+    {
+        return _isCollected;
     }
 }
