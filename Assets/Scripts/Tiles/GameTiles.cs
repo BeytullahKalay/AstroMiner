@@ -7,9 +7,10 @@ public class GameTiles : MonoBehaviour {
 	
 	public static GameTiles instance;
 	
-	public Tilemap Tilemap;
+	public Tilemap ColliderTilemap;
+	public Tilemap CoverTilemap;
 
-	public Dictionary<Vector3Int, WorldTile> tiles;
+	public Dictionary<Vector3Int, WorldTile> Tiles;
 
 	[SerializeField] private RockTypePicker rockTypePicker;
 
@@ -23,35 +24,33 @@ public class GameTiles : MonoBehaviour {
 		{
 			Destroy(gameObject);
 		}
-
 		GetWorldTiles();
 	}
 
 	// Use this for initialization
 	private void GetWorldTiles ()
 	{
-		tiles = new Dictionary<Vector3Int, WorldTile>();
-		foreach (Vector3Int pos in Tilemap.cellBounds.allPositionsWithin)
+		Tiles = new Dictionary<Vector3Int, WorldTile>();
+		foreach (Vector3Int pos in ColliderTilemap.cellBounds.allPositionsWithin)
 		{
 			var localPlace = new Vector3Int(pos.x, pos.y, pos.z);
 			var selectRockType = rockTypePicker.SelectRockType();
 			
 			selectRockType.Start(); // initialize rock for make tiles gettable
 
-			if (!Tilemap.HasTile(localPlace)) continue;
+			if (!ColliderTilemap.HasTile(localPlace)) continue;
 			var tile = new WorldTile
 			{
 				LocalPlace = localPlace,
-				WorldLocation = Tilemap.CellToWorld(localPlace),
-				TileBase = Tilemap.GetTile(localPlace),
-				TilemapMember = Tilemap,
+				WorldLocation = ColliderTilemap.CellToWorld(localPlace),
+				TileBase = ColliderTilemap.GetTile(localPlace),
+				TilemapMember = ColliderTilemap,
 				Name = localPlace.x + "," + localPlace.y,
 				Rock = selectRockType,
 				Health = 100,
-				RockFog = new RockFog(localPlace,Tilemap,selectRockType.GetTile()),
+				RockFog = new RockFog(localPlace,ColliderTilemap,selectRockType.GetTile()),
 			};
-			
-			tiles.Add(tile.LocalPlace, tile);
+			Tiles.Add(tile.LocalPlace, tile);
 		}
 	}
 }

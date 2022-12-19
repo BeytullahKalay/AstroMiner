@@ -10,7 +10,8 @@ public class PlayerRockInteract : MonoBehaviour
     [SerializeField] private Transform raycastPoint;
     [SerializeField] private LayerMask whatIsRock;
     [SerializeField] private Rigidbody2D _rb;
-    [SerializeField] private Tilemap tilemap;
+    [SerializeField] private Tilemap colliderTilemap;
+    [SerializeField] private Tilemap coverTilemap;
 
     private Dictionary<Vector3Int, WorldTile> _tiles;
 
@@ -20,7 +21,7 @@ public class PlayerRockInteract : MonoBehaviour
     private void Start()
     {
         _nextInteractTime = float.MinValue;
-        _tiles = GameTiles.instance.tiles;
+        _tiles = GameTiles.instance.Tiles;
     }
 
     public void Interact(Vector2 movementVector2)
@@ -38,14 +39,14 @@ public class PlayerRockInteract : MonoBehaviour
     {
         if (hit.collider != null)
         {
-            Vector3Int tilePos = tilemap.WorldToCell(rayEndPosition);
+            Vector3Int tilePos = colliderTilemap.WorldToCell(rayEndPosition);
             IsHit(movementVector2, tilePos);
         }
     }
 
     private void IsHit(Vector2 movementVector2, Vector3Int tilePos)
     {
-        if (tilemap.GetTile(tilePos))
+        if (colliderTilemap.GetTile(tilePos))
         {
             HitActions(movementVector2, tilePos);
         }
@@ -76,6 +77,7 @@ public class PlayerRockInteract : MonoBehaviour
 
     private void DestroyTile(Vector3Int tilePos)
     {
-        tilemap.SetTile(tilePos, null);
+        colliderTilemap.SetTile(tilePos, null);
+        coverTilemap.SetTile(tilePos, null);
     }
 }

@@ -6,15 +6,15 @@ public class RockFog
 {
     private Vector3Int _tilePos;
 
-    private Tilemap _tilemap;
+    private Tilemap _coverTilemap;
 
     private Tile _tile;
 
-    public RockFog(Vector3Int tilePos, Tilemap tilemap, Tile tile)
+    public RockFog(Vector3Int tilePos, Tilemap coverTilemap, Tile tile)
 
     {
         _tilePos = tilePos;
-        _tilemap = tilemap;
+        _coverTilemap = coverTilemap;
         _tile = tile;
     }
 
@@ -30,9 +30,9 @@ public class RockFog
     private void OpenFog(Dictionary<Vector3Int, WorldTile> tiles ,Vector3Int pos)
     {
         var checkPosition = _tilePos + pos;
-        if (_tilemap.HasTile(checkPosition) && tiles[checkPosition].RockFog._tile != null)
+        if (_coverTilemap.HasTile(checkPosition) && tiles[checkPosition].RockFog._tile != null)
         {
-            _tilemap.SetTile(checkPosition,tiles[checkPosition].RockFog._tile);
+            _coverTilemap.SetTile(checkPosition,tiles[checkPosition].RockFog._tile);
         }
     }
 }

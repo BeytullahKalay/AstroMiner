@@ -30,7 +30,7 @@ public abstract class Rock : MonoBehaviour
     {
         if (_rockHealth <= 0)
         {
-            tile.RockFog.OpenFogAround(GameTiles.instance.tiles);
+            tile.RockFog.OpenFogAround(GameTiles.instance.Tiles);
             OnDestroyRock(rockPosition);
             destroyAction?.Invoke();
         }
