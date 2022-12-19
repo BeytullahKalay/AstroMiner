@@ -84,8 +84,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.030769348
-        value: 0.2394371
+        time: 0.040821075
+        value: 0.15193558
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -145,3 +145,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 3343386533799835929}
+  PlayerTransform: {fileID: 0}
+  CollectedOrbTransform: {fileID: 0}
