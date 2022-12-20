@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="fixed: tile hit effect bug">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/PlayerCollect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/PlayerCollect.cs" afterDir="false" />
+    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="add: carrying penalty feature">
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orb/OrbFollow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectLineRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectLineRendererManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Player/Collect/PlayerCollect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Player/Collect/PlayerCollect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/SetMoveSpeedOnCollect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
@@ -102,7 +101,7 @@
       <workItem from="1671400945166" duration="4488000" />
       <workItem from="1671434493288" duration="3802000" />
       <workItem from="1671448138054" duration="7094000" />
-      <workItem from="1671528026164" duration="6863000" />
+      <workItem from="1671528026164" duration="7278000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
@@ -244,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671548104415</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add: carrying penalty feature">
+      <created>1671549199939</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1671549199939</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +292,7 @@
     <MESSAGE value="fixed: tile changing bug" />
     <MESSAGE value="add: tmpro" />
     <MESSAGE value="fixed: tile hit effect bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed: tile hit effect bug" />
+    <MESSAGE value="add: carrying penalty feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: carrying penalty feature" />
   </component>
 </project>

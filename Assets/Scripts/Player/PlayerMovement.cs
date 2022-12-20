@@ -37,6 +37,5 @@ public class PlayerMovement : MonoBehaviour
     public void SetMaxVelocity(float velocity)
     {
         _maxVelocity = velocity;
-        Debug.Log(_maxVelocity);
     }
 }
