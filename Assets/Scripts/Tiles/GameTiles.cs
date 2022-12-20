@@ -44,7 +44,7 @@ public class GameTiles : MonoBehaviour {
 				LocalPlace = localPlace,
 				WorldLocation = ColliderTilemap.CellToWorld(localPlace),
 				TileBase = ColliderTilemap.GetTile(localPlace),
-				TilemapMember = ColliderTilemap,
+				TilemapMember = CoverTilemap,
 				Name = localPlace.x + "," + localPlace.y,
 				Rock = selectRockType,
 				Health = 100,

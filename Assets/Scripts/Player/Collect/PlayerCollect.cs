@@ -4,8 +4,11 @@ using UnityEngine;
 [RequireComponent(typeof(ICollectInput))]
 [RequireComponent(typeof(CollectLineRendererManager))]
 [RequireComponent(typeof(CollectCollider))]
+[RequireComponent(typeof(ModifieMoveSpeedOnCollect))]
 public class PlayerCollect : MonoBehaviour
 {
+    [SerializeField] private SelectionImageController selectionImageController;
+
     private CollectActions _collectActions;
 
     private ICollectInput _collectInputs;
@@ -24,11 +27,12 @@ public class PlayerCollect : MonoBehaviour
 
     private void Update()
     {
-        CollectAndReleaseActions(_collectActions.GetFirstCollectibleOrb());
+        CollectActions(_collectActions.GetFirstCollectibleOrb());
         ReleaseActions(_collectActions.GetFirstCollectedOrb());
+        selectionImageController.SetSelectionImagePosition(_collectActions.CollectibleOrbs);
     }
 
-    private void CollectAndReleaseActions(Orb orb)
+    private void CollectActions(Orb orb)
     {
         if (orb == null) return;
 
