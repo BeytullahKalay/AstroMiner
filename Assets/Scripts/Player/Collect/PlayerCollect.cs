@@ -4,7 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(ICollectInput))]
 [RequireComponent(typeof(CollectLineRendererManager))]
 [RequireComponent(typeof(CollectCollider))]
-[RequireComponent(typeof(ModifieMoveSpeedOnCollect))]
+[RequireComponent(typeof(SetMoveSpeedOnCollect))]
 public class PlayerCollect : MonoBehaviour
 {
     [SerializeField] private SelectionImageController selectionImageController;
@@ -16,6 +16,8 @@ public class PlayerCollect : MonoBehaviour
     private CollectLineRendererManager _collectLineRendererManager;
 
     private CollectCollider _collectCollider;
+    
+    private SetMoveSpeedOnCollect _setMoveSpeedOnCollect;
 
     private void Awake()
     {
@@ -23,6 +25,7 @@ public class PlayerCollect : MonoBehaviour
         _collectInputs = GetComponent<ICollectInput>();
         _collectCollider = GetComponent<CollectCollider>();
         _collectLineRendererManager = GetComponent<CollectLineRendererManager>();
+        _setMoveSpeedOnCollect = GetComponent<SetMoveSpeedOnCollect>();
     }
 
     private void Update()
@@ -51,6 +54,8 @@ public class PlayerCollect : MonoBehaviour
 
             // check selection image
             _collectActions.CheckSelectionImageOnAmountChanged();
+            
+            CheckMoveSpeedModification();
         }
     }
 
@@ -60,17 +65,29 @@ public class PlayerCollect : MonoBehaviour
 
         if (Input.GetKeyDown(_collectInputs.ReleaseInput))
         {
+            // release orb
             orb.CallReleasedActions();
 
+            // remove line renderer from orb
             _collectLineRendererManager.RemoveLineRenderer(orb);
 
+            // remove orb from collected orbs
             _collectActions.CollectedOrbs.Remove(orb);
 
+            // if orb still in collectible radius then add orb to collectible list
             if (Vector2.Distance(transform.position, orb.transform.position) < _collectCollider.GetCollectRadius())
             {
                 _collectActions.CollectibleOrbs.Add(orb);
                 _collectActions.CheckSelectionImageOnAmountChanged();
             }
+
+            CheckMoveSpeedModification();
         }
+    }
+    
+    private void CheckMoveSpeedModification()
+    {
+        // set move speed if needed
+        _setMoveSpeedOnCollect.SetMoveSpeed?.Invoke(_collectActions.CollectedOrbs.Count);
     }
 }

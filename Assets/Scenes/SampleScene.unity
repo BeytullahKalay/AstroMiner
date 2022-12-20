@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carryAmountWithoutPenalty: 2
-  extraCarryingPenalty: 0.25
+  extraCarryingPenalty: 0.75
 --- !u!1 &272610096
 GameObject:
   m_ObjectHideFlags: 0

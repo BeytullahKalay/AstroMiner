@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="fixed: tile changing bug">
+    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="fixed: tile hit effect bug">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/Rock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/Rock.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/PlayerCollect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/PlayerCollect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tiles/GameTiles.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tiles/GameTiles.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,14 +18,18 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e40e5a8f982c4b618a930d29f9bd091c46a800/eb/bcc62366/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SCOB/RockTypeHolder/RockTypeHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AbstackClasses/CollectibleRock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/ICollectInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orb/OrbFollow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectLineRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectLineRendererManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/ModifieMoveSpeedOnCollect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Player/Collect/PlayerCollect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/SetMoveSpeedOnCollect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SelectionImageController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Tiles/GameTiles.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -101,7 +102,7 @@
       <workItem from="1671400945166" duration="4488000" />
       <workItem from="1671434493288" duration="3802000" />
       <workItem from="1671448138054" duration="7094000" />
-      <workItem from="1671528026164" duration="5908000" />
+      <workItem from="1671528026164" duration="6863000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
@@ -229,7 +230,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671538832473</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add: tmpro">
+      <created>1671548082982</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1671548082982</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fixed: tile hit effect bug">
+      <created>1671548104415</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1671548104415</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +284,8 @@
     <MESSAGE value="add: object pooling system to line renderer feature" />
     <MESSAGE value="add: cover tiles and border tiles feature" />
     <MESSAGE value="fixed: tile changing bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed: tile changing bug" />
+    <MESSAGE value="add: tmpro" />
+    <MESSAGE value="fixed: tile hit effect bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed: tile hit effect bug" />
   </component>
 </project>
