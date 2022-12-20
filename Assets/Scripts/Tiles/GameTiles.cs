@@ -48,7 +48,7 @@ public class GameTiles : MonoBehaviour {
 				Name = localPlace.x + "," + localPlace.y,
 				Rock = selectRockType,
 				Health = 100,
-				RockFog = new RockFog(localPlace,ColliderTilemap,selectRockType.GetTile()),
+				RockFog = new RockFog(localPlace,CoverTilemap,selectRockType.GetTile()),
 			};
 			Tiles.Add(tile.LocalPlace, tile);
 		}
