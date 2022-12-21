@@ -6,7 +6,7 @@ public class CollectLineRendererManager : MonoBehaviour
 {
     [SerializeField] private GameObject collectLineRenderer;
 
-    private readonly Dictionary<Orb, GameObject> _lineRenderers = new Dictionary<Orb, GameObject>();
+    private readonly Dictionary<ICollectible, GameObject> _lineRenderers = new Dictionary<ICollectible, GameObject>();
 
     private ObjectPool<GameObject> _pool;
 
@@ -29,7 +29,7 @@ public class CollectLineRendererManager : MonoBehaviour
             }, true, 10, 20);
     }
 
-    public void CreateConnectedLineRenderer(Transform playerTransform, Transform orbTransform, Orb orb)
+    public void CreateConnectedLineRenderer(Transform playerTransform, Transform collectibleTransform, ICollectible collectible)
     {
         // get line renderer game object
         var rendererGameObject = _pool.Get();
@@ -39,22 +39,22 @@ public class CollectLineRendererManager : MonoBehaviour
         var lineRenderer = rendererGameObject.GetComponent<CollectLineRenderer>();
 
         // add line renderer object to list
-        _lineRenderers.Add(orb, rendererGameObject);
+        _lineRenderers.Add(collectible, rendererGameObject);
 
         // assign line renderer point transforms
-        AssignLineRendererPointTransforms(playerTransform, orbTransform, lineRenderer);
+        AssignLineRendererPointTransforms(playerTransform, collectibleTransform, lineRenderer);
     }
 
-    private void AssignLineRendererPointTransforms(Transform playerTransform, Transform orbTransform,
+    private void AssignLineRendererPointTransforms(Transform playerTransform, Transform collectibleTransform,
         CollectLineRenderer lineRenderer)
     {
         lineRenderer.PlayerTransform = playerTransform;
-        lineRenderer.CollectedOrbTransform = orbTransform;
+        lineRenderer.CollectibleTransform = collectibleTransform;
     }
 
-    public void RemoveLineRenderer(Orb orb)
+    public void RemoveLineRenderer(ICollectible collectible)
     {
-        _pool.Release(_lineRenderers[orb]);
-        _lineRenderers.Remove(orb);
+        _pool.Release(_lineRenderers[collectible]);
+        _lineRenderers.Remove(collectible);
     }
 }

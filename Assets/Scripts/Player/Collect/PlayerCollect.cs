@@ -32,25 +32,25 @@ public class PlayerCollect : MonoBehaviour
     {
         CollectActions(_collectActions.GetFirstCollectibleOrb());
         ReleaseActions(_collectActions.GetFirstCollectedOrb());
-        selectionImageController.SetSelectionImagePosition(_collectActions.CollectibleOrbs);
+        selectionImageController.SetSelectionImagePosition(_collectActions.CollectibleObjects);
     }
 
-    private void CollectActions(Orb orb)
+    private void CollectActions(ICollectible collectible)
     {
-        if (orb == null) return;
+        if (collectible == null) return;
 
         if (Input.GetKeyDown(_collectInputs.ConnectInput))
         {
-            orb.CallConnectedActions(transform, _collectActions);
+            collectible.CallConnectedActions(transform, _collectActions);
 
             // TODO: fix performance issue
-            _collectLineRendererManager.CreateConnectedLineRenderer(transform, orb.transform, orb);
+            _collectLineRendererManager.CreateConnectedLineRenderer(transform, collectible.GetCollectibleTransform(), collectible);
 
             // remove collected orb from collectible list
-            _collectActions.CollectibleOrbs.Remove(orb);
+            _collectActions.CollectibleObjects.Remove(collectible);
 
             // add collected orb to collected list
-            _collectActions.CollectedOrbs.Add(orb);
+            _collectActions.CollectedObjects.Add(collectible);
 
             // check selection image
             _collectActions.CheckSelectionImageOnAmountChanged();
@@ -59,25 +59,25 @@ public class PlayerCollect : MonoBehaviour
         }
     }
 
-    private void ReleaseActions(Orb orb)
+    private void ReleaseActions(ICollectible collectible)
     {
-        if (orb == null) return;
+        if (collectible == null) return;
 
         if (Input.GetKeyDown(_collectInputs.ReleaseInput))
         {
             // release orb
-            orb.CallReleasedActions();
+            collectible.CallReleasedActions();
 
             // remove line renderer from orb
-            _collectLineRendererManager.RemoveLineRenderer(orb);
+            _collectLineRendererManager.RemoveLineRenderer(collectible);
 
             // remove orb from collected orbs
-            _collectActions.CollectedOrbs.Remove(orb);
+            _collectActions.CollectedObjects.Remove(collectible);
 
             // if orb still in collectible radius then add orb to collectible list
-            if (Vector2.Distance(transform.position, orb.transform.position) < _collectCollider.GetCollectRadius())
+            if (Vector2.Distance(transform.position, collectible.GetCollectibleTransform().position) < _collectCollider.GetCollectRadius())
             {
-                _collectActions.CollectibleOrbs.Add(orb);
+                _collectActions.CollectibleObjects.Add(collectible);
                 _collectActions.CheckSelectionImageOnAmountChanged();
             }
 
@@ -88,6 +88,6 @@ public class PlayerCollect : MonoBehaviour
     private void CheckMoveSpeedModification()
     {
         // set move speed if needed
-        _setMoveSpeedOnCollect.SetMoveSpeed?.Invoke(_collectActions.CollectedOrbs.Count);
+        _setMoveSpeedOnCollect.SetMoveSpeed?.Invoke(_collectActions.CollectedObjects.Count);
     }
 }

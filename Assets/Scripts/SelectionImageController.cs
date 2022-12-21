@@ -42,11 +42,11 @@ public class SelectionImageController : MonoBehaviour
     }
 
 
-    internal void SetSelectionImagePosition(List<Orb> orbList)
+    internal void SetSelectionImagePosition(List<ICollectible> collectibleList)
     {
-        if (orbList.Count > 0)
+        if (collectibleList.Count > 0)
         {
-            selectionImageTransform.position = orbList[0].transform.position;
+            selectionImageTransform.position = collectibleList[0].GetCollectibleTransform().position;
         }
     }
 

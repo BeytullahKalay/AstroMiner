@@ -41,6 +41,11 @@ public abstract class Orb : MonoBehaviour, ICollectible
         _isCollected = false;
     }
 
+    public Transform GetCollectibleTransform()
+    {
+        return transform;
+    }
+
     public bool GetIsConnected()
     {
         return _isCollected;

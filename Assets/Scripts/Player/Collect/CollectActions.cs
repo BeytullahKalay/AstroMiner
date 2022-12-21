@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class CollectActions : MonoBehaviour
 {
-    public List<Orb> CollectibleOrbs = new List<Orb>();
-    public List<Orb> CollectedOrbs = new List<Orb>();
+    public List<ICollectible> CollectibleObjects = new List<ICollectible>();
+    public List<ICollectible> CollectedObjects = new List<ICollectible>();
 
     private SelectionImageController _selectionImageController;
 
@@ -32,39 +32,39 @@ public class CollectActions : MonoBehaviour
     {
         if (col.TryGetComponent(out ICollectible collectibleObject))
         {
-            var orb = col.GetComponent<Orb>();
+            var collectible = col.GetComponent<ICollectible>();
     
             // if not in range but still connected to player
-            if (!CollectibleOrbs.Contains(orb)) return;
+            if (!CollectibleObjects.Contains(collectible)) return;
     
-            CollectibleOrbs.Remove(orb);
+            CollectibleObjects.Remove(collectible);
         }
     }
 
     public void CheckSelectionImageOnAmountChanged()
     {
-        _selectionImageController.OnListAmountChanged?.Invoke(CollectibleOrbs.Count);
+        _selectionImageController.OnListAmountChanged?.Invoke(CollectibleObjects.Count);
     }
 
     private void CheckObjectAndAddToList(Collider2D col)
     {
         if (col.TryGetComponent(out ICollectible collectibleObject))
         {
-            var orb = col.GetComponent<Orb>();
+            var collectible = col.GetComponent<ICollectible>();
 
-            if (orb.GetIsConnected()) return;
+            if (collectible.GetIsConnected()) return;
 
-            CollectibleOrbs.Add(orb);
+            CollectibleObjects.Add(collectible);
         }
     }
     
-    public Orb GetFirstCollectibleOrb()
+    public ICollectible GetFirstCollectibleOrb()
     {
-        return CollectibleOrbs.Count > 0 ? CollectibleOrbs[0] : null;
+        return CollectibleObjects.Count > 0 ? CollectibleObjects[0] : null;
     }
 
-    public Orb GetFirstCollectedOrb()
+    public ICollectible GetFirstCollectedOrb()
     {
-        return CollectedOrbs.Count > 0 ? CollectedOrbs[0] : null;
+        return CollectedObjects.Count > 0 ? CollectedObjects[0] : null;
     }
 }
