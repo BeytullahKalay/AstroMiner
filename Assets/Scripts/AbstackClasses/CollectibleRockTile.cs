@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public abstract class CollectibleRock : Rock
+public abstract class CollectibleRockTile : Rock
 {
     private RockMaterial _rockMaterial;
     protected RockType _type;

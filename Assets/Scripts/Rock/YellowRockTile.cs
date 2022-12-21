@@ -1,4 +1,4 @@
-public class YellowRock : CollectibleRock
+public class YellowRockTile : CollectibleRockTile
 {
     public override void Start()
     {

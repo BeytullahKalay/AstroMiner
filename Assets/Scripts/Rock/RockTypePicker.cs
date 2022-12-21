@@ -21,12 +21,12 @@ public class RockTypePicker : MonoBehaviour
         else if (randVal < blueRockPickChance)
         {
             // make rock blue
-            return gameObject.AddComponent<BlueRock>();
+            return gameObject.AddComponent<BlueRockTile>();
         }
         else
         {
             // make rock yellow
-            return gameObject.AddComponent<YellowRock>();
+            return gameObject.AddComponent<YellowRockTile>();
         }
     }
 }

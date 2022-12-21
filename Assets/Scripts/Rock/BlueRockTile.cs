@@ -1,5 +1,5 @@
 
-public class BlueRock : CollectibleRock
+public class BlueRockTile : CollectibleRockTile
 {
     public override void Start()
     {
