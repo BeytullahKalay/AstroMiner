@@ -42,7 +42,7 @@ public class SelectionImageController : MonoBehaviour
     }
 
 
-    internal void SetSelectionImagePosition(List<ICollectible> collectibleList)
+    internal void SetSelectionImagePosition(List<Collectible> collectibleList)
     {
         if (collectibleList.Count > 0)
         {

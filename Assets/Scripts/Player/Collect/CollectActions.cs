@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class CollectActions : MonoBehaviour
 {
-    public List<ICollectible> CollectibleObjects = new List<ICollectible>();
-    public List<ICollectible> CollectedObjects = new List<ICollectible>();
+    public List<Collectible> CollectibleObjects = new List<Collectible>();
+    public List<Collectible> CollectedObjects = new List<Collectible>();
 
     private SelectionImageController _selectionImageController;
 
@@ -30,9 +30,9 @@ public class CollectActions : MonoBehaviour
     
     private void CheckObjectAndRemoveFromList(Collider2D col)
     {
-        if (col.TryGetComponent(out ICollectible collectibleObject))
+        if (col.TryGetComponent(out Collectible collectibleObject))
         {
-            var collectible = col.GetComponent<ICollectible>();
+            var collectible = col.GetComponent<Collectible>();
     
             // if not in range but still connected to player
             if (!CollectibleObjects.Contains(collectible)) return;
@@ -48,9 +48,9 @@ public class CollectActions : MonoBehaviour
 
     private void CheckObjectAndAddToList(Collider2D col)
     {
-        if (col.TryGetComponent(out ICollectible collectibleObject))
+        if (col.TryGetComponent(out Collectible collectibleObject))
         {
-            var collectible = col.GetComponent<ICollectible>();
+            var collectible = col.GetComponent<Collectible>();
 
             if (collectible.GetIsConnected()) return;
 
@@ -58,12 +58,12 @@ public class CollectActions : MonoBehaviour
         }
     }
     
-    public ICollectible GetFirstCollectibleOrb()
+    public Collectible GetFirstCollectibleOrb()
     {
         return CollectibleObjects.Count > 0 ? CollectibleObjects[0] : null;
     }
 
-    public ICollectible GetFirstCollectedOrb()
+    public Collectible GetFirstCollectedOrb()
     {
         return CollectedObjects.Count > 0 ? CollectedObjects[0] : null;
     }

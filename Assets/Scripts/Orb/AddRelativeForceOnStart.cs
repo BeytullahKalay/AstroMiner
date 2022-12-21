@@ -1,8 +1,14 @@
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AddRelativeForceOnStart : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rigidbody2D;
+    private Rigidbody2D _rigidbody2D;
+
+    private void Awake()
+    {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+    }
 
     private void Start()
     {

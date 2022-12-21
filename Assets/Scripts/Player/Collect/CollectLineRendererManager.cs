@@ -6,7 +6,7 @@ public class CollectLineRendererManager : MonoBehaviour
 {
     [SerializeField] private GameObject collectLineRenderer;
 
-    private readonly Dictionary<ICollectible, GameObject> _lineRenderers = new Dictionary<ICollectible, GameObject>();
+    private readonly Dictionary<Collectible, GameObject> _lineRenderers = new Dictionary<Collectible, GameObject>();
 
     private ObjectPool<GameObject> _pool;
 
@@ -29,7 +29,7 @@ public class CollectLineRendererManager : MonoBehaviour
             }, true, 10, 20);
     }
 
-    public void CreateConnectedLineRenderer(Transform playerTransform, Transform collectibleTransform, ICollectible collectible)
+    public void CreateConnectedLineRenderer(Transform playerTransform, Transform collectibleTransform, Collectible collectible)
     {
         // get line renderer game object
         var rendererGameObject = _pool.Get();
@@ -52,7 +52,7 @@ public class CollectLineRendererManager : MonoBehaviour
         lineRenderer.CollectibleTransform = collectibleTransform;
     }
 
-    public void RemoveLineRenderer(ICollectible collectible)
+    public void RemoveLineRenderer(Collectible collectible)
     {
         _pool.Release(_lineRenderers[collectible]);
         _lineRenderers.Remove(collectible);

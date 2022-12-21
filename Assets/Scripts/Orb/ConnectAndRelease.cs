@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class OrbConnectAndRelease : MonoBehaviour
+public class ConnectAndRelease : MonoBehaviour
 {
     [SerializeField] private float linearDrag = 2f;
 

@@ -1,3 +1,3 @@
-public class OrbBlue : Orb
+public class OrbBlue : Collectible
 {
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class OrbFollow : MonoBehaviour
+public class FollowPlayer : MonoBehaviour
 {
     [SerializeField] private float followForce = 5f;
     [SerializeField] private float minDistanceBetweenOrbAndPlayer = 2.5f;

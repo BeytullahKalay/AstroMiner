@@ -35,7 +35,7 @@ public class PlayerCollect : MonoBehaviour
         selectionImageController.SetSelectionImagePosition(_collectActions.CollectibleObjects);
     }
 
-    private void CollectActions(ICollectible collectible)
+    private void CollectActions(Collectible collectible)
     {
         if (collectible == null) return;
 
@@ -59,7 +59,7 @@ public class PlayerCollect : MonoBehaviour
         }
     }
 
-    private void ReleaseActions(ICollectible collectible)
+    private void ReleaseActions(Collectible collectible)
     {
         if (collectible == null) return;
 
