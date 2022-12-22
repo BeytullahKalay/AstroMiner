@@ -1,15 +1,14 @@
 using UnityEngine;
 
-public class WarPanelController : PanelController
+public class WarPanelController : InteractActionController
 {
-    public override void OpenPanel()
+    public override void StartInteract()
     {
         Debug.Log("war panel open");
     }
 
-    public override void ClosePanel()
+    public override void StopInteract()
     {
         Debug.Log("war panel close");
-
     }
 }

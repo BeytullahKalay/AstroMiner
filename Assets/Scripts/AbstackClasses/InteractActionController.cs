@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public abstract class PanelController : MonoBehaviour
+public abstract class InteractActionController : MonoBehaviour
 {
     [SerializeField] private GameObject interactImage;
     [SerializeField] private LayerMask whatIsPlayer;
     [SerializeField] private float checkPlayerRadius = 4f;
+    
 
 
     private void Start()
@@ -12,18 +13,21 @@ public abstract class PanelController : MonoBehaviour
         interactImage.SetActive(false);
     }
 
+
+
     private void Update()
     {
         CalculateInteractImageState();
     }
 
 
-    public virtual void OpenPanel()
+    public virtual void StartInteract()
     {
     }
 
-    public virtual void ClosePanel()
+    public virtual void StopInteract()
     {
+
     }
 
 

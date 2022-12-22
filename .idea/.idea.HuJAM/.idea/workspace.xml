@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="modified: SampleScene.unity">
+    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/PanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/InteractActionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/PanelController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/InteractActionController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/DetectInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/DetectInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerInteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerInteractInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerInteractInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpgradePanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UpgradePanelController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WarPanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WarPanelController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +27,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e40e5a8f982c4b618a930d29f9bd091c46a800/eb/bcc62366/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SCOB/RockTypeHolder/RockTypeHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AbstackClasses/CollectibleRockTile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AbstackClasses/PanelController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AbstackClasses/InteractActionController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/ICollectInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orb/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectLineRenderer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -105,7 +112,8 @@
       <workItem from="1671434493288" duration="3802000" />
       <workItem from="1671448138054" duration="7094000" />
       <workItem from="1671528026164" duration="7892000" />
-      <workItem from="1671616287432" duration="19256000" />
+      <workItem from="1671616287432" duration="19446000" />
+      <workItem from="1671699575920" duration="3888000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
@@ -289,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671627395432</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add: interaction image open&amp;close and basic interaction feature">
+      <created>1671639798986</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1671639798986</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,8 +326,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add: rock types and spawn orbs" />
-    <MESSAGE value="add: physics materials" />
     <MESSAGE value="add: background" />
     <MESSAGE value="add: bg" />
     <MESSAGE value="add: sprites, tilemap, tilemap collisions, tile interactions and tile destroy actions feature" />
@@ -336,6 +349,8 @@
     <MESSAGE value="modified: orb class to collectible class and removed ICollectible interface" />
     <MESSAGE value="modified: CollectibleRock.cs name to CollectibleRock.cs.meta" />
     <MESSAGE value="modified: SampleScene.unity" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified: SampleScene.unity" />
+    <MESSAGE value="add: interaction image open&amp;close feature and basic interaction" />
+    <MESSAGE value="add: interaction image open&amp;close and basic interaction feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: interaction image open&amp;close and basic interaction feature" />
   </component>
 </project>

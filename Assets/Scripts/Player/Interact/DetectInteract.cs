@@ -5,7 +5,7 @@ public class DetectInteract : MonoBehaviour
     [SerializeField] private float detectPlayerDistance = 2f;
     [SerializeField] private LayerMask whatIsInteractable;
 
-    private Collider2D[] interactable;
+    private Collider2D[] _interactable;
 
     private void Update()
     {
@@ -14,7 +14,7 @@ public class DetectInteract : MonoBehaviour
 
     private void FindInteractable()
     {
-        interactable = Physics2D.OverlapCircleAll(transform.position, detectPlayerDistance, whatIsInteractable);
+        _interactable = Physics2D.OverlapCircleAll(transform.position, detectPlayerDistance, whatIsInteractable);
     }
 
     private void OnDrawGizmos()
@@ -24,6 +24,6 @@ public class DetectInteract : MonoBehaviour
 
     public Collider2D[] GetInteractableArray()
     {
-        return interactable;
+        return _interactable;
     }
 }
