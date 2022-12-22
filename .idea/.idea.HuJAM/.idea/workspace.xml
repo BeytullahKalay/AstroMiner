@@ -4,12 +4,8 @@
     <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/PanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/InteractActionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/PanelController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/InteractActionController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IInteractInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/DetectInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/DetectInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerInteractInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerInteractInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/InteractActionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstackClasses/InteractActionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpgradePanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UpgradePanelController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WarPanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WarPanelController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
@@ -35,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectLineRendererManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/SetMoveSpeedOnCollect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Interact/DetectInteract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerStateController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SelectionImageController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UpgradePanelController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -113,7 +110,8 @@
       <workItem from="1671448138054" duration="7094000" />
       <workItem from="1671528026164" duration="7892000" />
       <workItem from="1671616287432" duration="19446000" />
-      <workItem from="1671699575920" duration="3888000" />
+      <workItem from="1671699575920" duration="4183000" />
+      <workItem from="1671708748075" duration="1936000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
@@ -304,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671639798986</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="add: interact and stop interact basics">
+      <created>1671703883215</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1671703883215</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +331,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add: background" />
     <MESSAGE value="add: bg" />
     <MESSAGE value="add: sprites, tilemap, tilemap collisions, tile interactions and tile destroy actions feature" />
     <MESSAGE value="started: implementing fog open feature" />
@@ -351,6 +355,7 @@
     <MESSAGE value="modified: SampleScene.unity" />
     <MESSAGE value="add: interaction image open&amp;close feature and basic interaction" />
     <MESSAGE value="add: interaction image open&amp;close and basic interaction feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: interaction image open&amp;close and basic interaction feature" />
+    <MESSAGE value="add: interact and stop interact basics" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: interact and stop interact basics" />
   </component>
 </project>

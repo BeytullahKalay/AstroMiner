@@ -2,6 +2,7 @@ using UnityEngine;
 
 public abstract class InteractActionController : MonoBehaviour
 {
+    [Header("Interact Action Controller Values")]
     [SerializeField] private GameObject interactImage;
     [SerializeField] private LayerMask whatIsPlayer;
     [SerializeField] private float checkPlayerRadius = 4f;

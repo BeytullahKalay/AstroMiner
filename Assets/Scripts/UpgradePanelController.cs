@@ -2,17 +2,16 @@ using UnityEngine;
 
 public class UpgradePanelController : InteractActionController
 {
+    [Header("UpgradePanelControllerValues")]
     [SerializeField] private GameObject panel;
 
     public override void StartInteract()
     {
-        Debug.Log("upgrade panel open");
         OpenPanelAndStopGame();
     }
 
     public override void StopInteract()
     {
-        Debug.Log("upgrade panel close");
         ClosePanelAndStartGame();
     }
 

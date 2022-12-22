@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerStateController))]
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rb;
@@ -7,11 +8,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float accelerationSpeed = 5f;
     [SerializeField] private float maxVelocity = 5f;
 
+    private PlayerStateController _stateController;
+
     private float _maxVelocity;
     
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _stateController = GetComponent<PlayerStateController>();
     }
 
     private void Start()
@@ -21,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void MovePlayer(Vector2 movementVector2)
     {
+        // Check player state
+        if (_stateController.CurrentPlayerState != PlayerStateController.PlayerState.Mining) return;
+        
         // move player
         _rb.AddForce(movementVector2 * accelerationSpeed, ForceMode2D.Force);
         
