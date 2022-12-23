@@ -1,19 +1,78 @@
 using System;
+using UI;
 using UnityEngine;
 
+[RequireComponent(typeof(UpgradePanelUIController))]
+[RequireComponent(typeof(UpgradeValueController))]
 public class UpgradeManager : MonoBehaviour
 {
-    [SerializeField] private SetMoveSpeedOnCollect setMoveSpeedOnCollect;
-    [SerializeField] private PlayerMovement playerMovement;
-    [SerializeField] private PlayerRockInteract playerRockInteract;
+    private UpgradePanelUIController _upgradePanelUIController;
+    private UpgradeValueController _upgradeValueController;
 
-    [Header("Upgrade Amounts")] 
-    [SerializeField] private float upgradeMoveMaxVelocity = 2f;
-    [SerializeField] private float upgradeMoveAcceleration = 8f;
-    [SerializeField] private int upgradeCarryingAmountWithoutPenalty = 1;
-    [SerializeField] private int upgradeRockDamage = 15;
+    private Action<bool> _upgradeSpeedAction;
+    private Action<bool> _upgradeRockDamageAction;
+    private Action<bool> _upgradeCarryingAction;
 
-    public Action UpgradeSpeed;
-    public Action UpgradeRockDamage;
-    public Action UpgradeCarrying;
+    private void Awake()
+    {
+        AssignActionFunctions();
+
+        _upgradePanelUIController = GetComponent<UpgradePanelUIController>();
+        _upgradeValueController = GetComponent<UpgradeValueController>();
+    }
+
+    private void AssignActionFunctions()
+    {
+        _upgradeSpeedAction += UpgradeSpeed;
+        _upgradeRockDamageAction += UpgradeRockDamage;
+        _upgradeCarryingAction += UpgradeCarryingPower;
+    }
+
+    private void UpgradeSpeed(bool isUpgradable)
+    {
+        Debug.Log("upgrade speed");
+        if (isUpgradable)
+        {
+            _upgradePanelUIController.FlySpeed.Upgrade();
+            _upgradeValueController.UpgradeSpeed();
+        }
+    }
+
+    private void UpgradeRockDamage(bool isUpgradable)
+    {
+        Debug.Log("upgrade rock damage");
+        if (isUpgradable)
+        {
+            _upgradePanelUIController.RockDamage.Upgrade();
+            _upgradeValueController.UpgradeRockDamage();
+        }
+    }
+    
+    private void UpgradeCarryingPower(bool isUpgradable)
+    {
+        Debug.Log("upgrade carrying power");
+        if (isUpgradable)
+        {
+            _upgradePanelUIController.CarryingPower.Upgrade();
+            _upgradeValueController.UpgradeCarryingPower();
+        }
+    }
+
+    // used by unity event
+    public void CallUpgradeSpeed()
+    {
+        _upgradeSpeedAction?.Invoke(_upgradePanelUIController.FlySpeed.IsUpgradeable);
+    }
+    
+    // used by unity event
+    public void CallUpgradeRockDamage()
+    {
+        _upgradeRockDamageAction?.Invoke(_upgradePanelUIController.RockDamage.IsUpgradeable);
+    }
+    
+    // used by unity event
+    public void CallUpgradeCarryingPower()
+    {
+        _upgradeCarryingAction?.Invoke(_upgradePanelUIController.CarryingPower.IsUpgradeable);
+    }
 }

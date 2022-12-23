@@ -1,6 +1,9 @@
 using UnityEngine;
 
-public interface IMovementInput
+namespace Interfaces
 {
-    public Vector2 MovementInputVector { get; }
+    public interface IMovementInput
+    {
+        public Vector2 MovementInputVector { get; }
+    }
 }

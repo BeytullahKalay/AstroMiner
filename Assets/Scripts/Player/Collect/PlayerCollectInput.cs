@@ -1,18 +1,22 @@
+using Interfaces;
 using UnityEngine;
 
-public class PlayerCollectInput : MonoBehaviour,ICollectInput
+namespace Player.Collect
 {
-    public KeyCode ConnectInput { get; private set; }
-    public KeyCode ReleaseInput { get; private set; }
-
-    private void Awake()
+    public class PlayerCollectInput : MonoBehaviour,ICollectInput
     {
-        GetMouseInput();
-    }
+        public KeyCode ConnectInput { get; private set; }
+        public KeyCode ReleaseInput { get; private set; }
 
-    private void GetMouseInput()
-    {
-        ConnectInput = KeyCode.Mouse0;
-        ReleaseInput = KeyCode.Mouse1;
+        private void Awake()
+        {
+            GetMouseInput();
+        }
+
+        private void GetMouseInput()
+        {
+            ConnectInput = KeyCode.Mouse0;
+            ReleaseInput = KeyCode.Mouse1;
+        }
     }
 }

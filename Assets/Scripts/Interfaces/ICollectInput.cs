@@ -1,8 +1,11 @@
 
 using UnityEngine;
 
-public interface ICollectInput
+namespace Interfaces
 {
-    public KeyCode ConnectInput { get; }
-    public KeyCode ReleaseInput { get; }
+    public interface ICollectInput
+    {
+        public KeyCode ConnectInput { get; }
+        public KeyCode ReleaseInput { get; }
+    }
 }

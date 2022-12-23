@@ -1,3 +1,8 @@
-public class OrbYellow : Collectible
+using AbstractClasses;
+
+namespace Orb
 {
+    public class OrbYellow : Collectible
+    {
+    }
 }

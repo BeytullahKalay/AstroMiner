@@ -1,18 +1,21 @@
 using System.Collections.Generic;
+using AbstractClasses;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class CollectLineRendererManager : MonoBehaviour
+namespace Player.Collect
 {
-    [SerializeField] private GameObject collectLineRenderer;
-
-    private readonly Dictionary<Collectible, GameObject> _lineRenderers = new Dictionary<Collectible, GameObject>();
-
-    private ObjectPool<GameObject> _pool;
-
-    private void Start()
+    public class CollectLineRendererManager : MonoBehaviour
     {
-        _pool = new ObjectPool<GameObject>(() =>
+        [SerializeField] private GameObject collectLineRenderer;
+
+        private readonly Dictionary<Collectible, GameObject> _lineRenderers = new Dictionary<Collectible, GameObject>();
+
+        private ObjectPool<GameObject> _pool;
+
+        private void Start()
+        {
+            _pool = new ObjectPool<GameObject>(() =>
             {
                 return Instantiate(collectLineRenderer);
             }, lineRenderer =>
@@ -27,34 +30,35 @@ public class CollectLineRendererManager : MonoBehaviour
             {
                 Destroy(lineRenderer);
             }, true, 10, 20);
-    }
+        }
 
-    public void CreateConnectedLineRenderer(Transform playerTransform, Transform collectibleTransform, Collectible collectible)
-    {
-        // get line renderer game object
-        var rendererGameObject = _pool.Get();
+        public void CreateConnectedLineRenderer(Transform playerTransform, Transform collectibleTransform, Collectible collectible)
+        {
+            // get line renderer game object
+            var rendererGameObject = _pool.Get();
 
-        // TODO: get rid of GetComponent
-        // get collect line renderer
-        var lineRenderer = rendererGameObject.GetComponent<CollectLineRenderer>();
+            // TODO: get rid of GetComponent
+            // get collect line renderer
+            var lineRenderer = rendererGameObject.GetComponent<CollectLineRenderer>();
 
-        // add line renderer object to list
-        _lineRenderers.Add(collectible, rendererGameObject);
+            // add line renderer object to list
+            _lineRenderers.Add(collectible, rendererGameObject);
 
-        // assign line renderer point transforms
-        AssignLineRendererPointTransforms(playerTransform, collectibleTransform, lineRenderer);
-    }
+            // assign line renderer point transforms
+            AssignLineRendererPointTransforms(playerTransform, collectibleTransform, lineRenderer);
+        }
 
-    private void AssignLineRendererPointTransforms(Transform playerTransform, Transform collectibleTransform,
-        CollectLineRenderer lineRenderer)
-    {
-        lineRenderer.PlayerTransform = playerTransform;
-        lineRenderer.CollectibleTransform = collectibleTransform;
-    }
+        private void AssignLineRendererPointTransforms(Transform playerTransform, Transform collectibleTransform,
+            CollectLineRenderer lineRenderer)
+        {
+            lineRenderer.PlayerTransform = playerTransform;
+            lineRenderer.CollectibleTransform = collectibleTransform;
+        }
 
-    public void RemoveLineRenderer(Collectible collectible)
-    {
-        _pool.Release(_lineRenderers[collectible]);
-        _lineRenderers.Remove(collectible);
+        public void RemoveLineRenderer(Collectible collectible)
+        {
+            _pool.Release(_lineRenderers[collectible]);
+            _lineRenderers.Remove(collectible);
+        }
     }
 }

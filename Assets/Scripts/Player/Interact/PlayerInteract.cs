@@ -1,42 +1,47 @@
+using AbstractClasses;
+using Interfaces;
 using UnityEngine;
 
-[RequireComponent(typeof(IInteractInput))]
-[RequireComponent(typeof(DetectInteract))]
-public class PlayerInteract : MonoBehaviour
+namespace Player.Interact
 {
-    private IInteractInput _interactInput;
-    private DetectInteract _detectInteract;
-
-    private void Awake()
+    [RequireComponent(typeof(IInteractInput))]
+    [RequireComponent(typeof(DetectInteract))]
+    public class PlayerInteract : MonoBehaviour
     {
-        _interactInput = GetComponent<IInteractInput>();
-        _detectInteract = GetComponent<DetectInteract>();
-    }
+        private IInteractInput _interactInput;
+        private DetectInteract _detectInteract;
 
-    private void Update()
-    {
-        Interact();
-        StopInteract();
-    }
+        private void Awake()
+        {
+            _interactInput = GetComponent<IInteractInput>();
+            _detectInteract = GetComponent<DetectInteract>();
+        }
 
-    private void Interact()
-    {
-        if (!Input.GetKeyDown(_interactInput.InteractInput)) return;
+        private void Update()
+        {
+            Interact();
+            StopInteract();
+        }
 
-        if (_detectInteract.GetInteractableArray().Length > 1)
-            Debug.LogError("More than one interactable!");
+        private void Interact()
+        {
+            if (!Input.GetKeyDown(_interactInput.InteractInput)) return;
 
-        if (_detectInteract.GetInteractableArray().Length > 0)
-            _detectInteract.GetInteractableArray()[0].GetComponent<InteractActionController>().StartInteract();
-        else
-            Debug.Log("No interactable panel around player");
-    }
+            if (_detectInteract.GetInteractableArray().Length > 1)
+                Debug.LogError("More than one interactable!");
 
-    private void StopInteract()
-    {
-        if (!Input.GetKeyDown(_interactInput.StopInteractInput)) return;
-        
-        if (_detectInteract.GetInteractableArray().Length > 0)
-            _detectInteract.GetInteractableArray()[0].GetComponent<InteractActionController>().StopInteract();
+            if (_detectInteract.GetInteractableArray().Length > 0)
+                _detectInteract.GetInteractableArray()[0].GetComponent<InteractActionController>().StartInteract();
+            else
+                Debug.Log("No interactable panel around player");
+        }
+
+        private void StopInteract()
+        {
+            if (!Input.GetKeyDown(_interactInput.StopInteractInput)) return;
+
+            if (_detectInteract.GetInteractableArray().Length > 0)
+                _detectInteract.GetInteractableArray()[0].GetComponent<InteractActionController>().StopInteract();
+        }
     }
 }

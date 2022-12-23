@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class PlayerStateController : MonoBehaviour
+namespace Player
 {
-    public PlayerState CurrentPlayerState;
-    public enum  PlayerState
+    public class PlayerStateController : MonoBehaviour
     {
-        Mining,
-        Fight
+        public PlayerState CurrentPlayerState;
+        public enum  PlayerState
+        {
+            Mining,
+            Fight
+        }
     }
 }

@@ -1,29 +1,34 @@
+using Interfaces;
+using Player.Interact;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerMovement))]
-[RequireComponent(typeof(PlayerRenderer))]
-[RequireComponent(typeof(PlayerRockInteract))]
-[RequireComponent(typeof(IMovementInput))]
-public class Player : MonoBehaviour
+namespace Player
 {
-    private IMovementInput _movementInput;
-    private PlayerMovement _playerMovement;
-    private PlayerRenderer _playerRenderer;
-    private PlayerRockInteract _playerRockInteract;
-
-    private void Awake()
+    [RequireComponent(typeof(PlayerMovement))]
+    [RequireComponent(typeof(PlayerRenderer))]
+    [RequireComponent(typeof(PlayerRockInteract))]
+    [RequireComponent(typeof(IMovementInput))]
+    public class Player : MonoBehaviour
     {
-        _movementInput = GetComponent<IMovementInput>();
-        _playerMovement = GetComponent<PlayerMovement>();
-        _playerRenderer = GetComponent<PlayerRenderer>();
-        _playerRockInteract = GetComponent<PlayerRockInteract>();
-    }
+        private IMovementInput _movementInput;
+        private PlayerMovement _playerMovement;
+        private PlayerRenderer _playerRenderer;
+        private PlayerRockInteract _playerRockInteract;
+
+        private void Awake()
+        {
+            _movementInput = GetComponent<IMovementInput>();
+            _playerMovement = GetComponent<PlayerMovement>();
+            _playerRenderer = GetComponent<PlayerRenderer>();
+            _playerRockInteract = GetComponent<PlayerRockInteract>();
+        }
 
 
-    private void Update()
-    {
-        _playerMovement.MovePlayer(_movementInput.MovementInputVector);
-        _playerRenderer.RenderPlayer(_movementInput.MovementInputVector);
-        _playerRockInteract.Interact(_movementInput.MovementInputVector);
+        private void Update()
+        {
+            _playerMovement.MovePlayer(_movementInput.MovementInputVector);
+            _playerRenderer.RenderPlayer(_movementInput.MovementInputVector);
+            _playerRockInteract.Interact(_movementInput.MovementInputVector);
+        }
     }
 }

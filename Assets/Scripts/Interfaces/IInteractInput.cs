@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public interface IInteractInput
+namespace Interfaces
 {
-    public KeyCode InteractInput { get; }
-    public KeyCode StopInteractInput { get; }
+    public interface IInteractInput
+    {
+        public KeyCode InteractInput { get; }
+        public KeyCode StopInteractInput { get; }
+    }
 }

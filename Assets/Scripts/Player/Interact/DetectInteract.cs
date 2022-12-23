@@ -1,29 +1,32 @@
 using UnityEngine;
 
-public class DetectInteract : MonoBehaviour
+namespace Player.Interact
 {
-    [SerializeField] private float detectPlayerDistance = 2f;
-    [SerializeField] private LayerMask whatIsInteractable;
-
-    private Collider2D[] _interactable;
-
-    private void Update()
+    public class DetectInteract : MonoBehaviour
     {
-        FindInteractable();
-    }
+        [SerializeField] private float detectPlayerDistance = 2f;
+        [SerializeField] private LayerMask whatIsInteractable;
 
-    private void FindInteractable()
-    {
-        _interactable = Physics2D.OverlapCircleAll(transform.position, detectPlayerDistance, whatIsInteractable);
-    }
+        private Collider2D[] _interactable;
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, detectPlayerDistance);
-    }
+        private void Update()
+        {
+            FindInteractable();
+        }
 
-    public Collider2D[] GetInteractableArray()
-    {
-        return _interactable;
+        private void FindInteractable()
+        {
+            _interactable = Physics2D.OverlapCircleAll(transform.position, detectPlayerDistance, whatIsInteractable);
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(transform.position, detectPlayerDistance);
+        }
+
+        public Collider2D[] GetInteractableArray()
+        {
+            return _interactable;
+        }
     }
 }

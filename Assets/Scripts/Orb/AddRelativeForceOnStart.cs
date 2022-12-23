@@ -1,17 +1,20 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class AddRelativeForceOnStart : MonoBehaviour
+namespace Orb
 {
-    private Rigidbody2D _rigidbody2D;
-
-    private void Awake()
+    public class AddRelativeForceOnStart : MonoBehaviour
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
-    }
+        private Rigidbody2D _rigidbody2D;
 
-    private void Start()
-    {
-        _rigidbody2D.AddRelativeForce(Random.onUnitSphere * 5, ForceMode2D.Impulse);
+        private void Awake()
+        {
+            _rigidbody2D = GetComponent<Rigidbody2D>();
+        }
+
+        private void Start()
+        {
+            _rigidbody2D.AddRelativeForce(Random.onUnitSphere * 5, ForceMode2D.Impulse);
+        }
     }
 }

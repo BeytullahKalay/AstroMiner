@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class CollectLineRenderer : MonoBehaviour
+namespace Player.Collect
 {
-    [SerializeField] private LineRenderer lineRenderer;
-
-    [HideInInspector] public Transform PlayerTransform;
-    [HideInInspector] public Transform CollectibleTransform;
-
-    private void Update()
+    public class CollectLineRenderer : MonoBehaviour
     {
-        lineRenderer.SetPosition(0, PlayerTransform.position);
-        lineRenderer.SetPosition(1, CollectibleTransform.position);
+        [SerializeField] private LineRenderer lineRenderer;
+
+        [HideInInspector] public Transform PlayerTransform;
+        [HideInInspector] public Transform CollectibleTransform;
+
+        private void Update()
+        {
+            lineRenderer.SetPosition(0, PlayerTransform.position);
+            lineRenderer.SetPosition(1, CollectibleTransform.position);
+        }
     }
 }
