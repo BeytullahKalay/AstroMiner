@@ -1,15 +1,17 @@
+using Player;
 using UnityEngine;
 
 namespace AbstractClasses
 {
     public abstract class InteractActionController : MonoBehaviour
     {
-        [Header("Interact Action Controller Values")]
-        [SerializeField] private GameObject interactImage;
+        [Header("Interact Action Controller Values")] [SerializeField]
+        private GameObject interactImage;
+        [SerializeField] private PlayerStateController playerStateController;
         [SerializeField] private LayerMask whatIsPlayer;
         [SerializeField] private float checkPlayerRadius = 4f;
 
-        private bool _onInteract;
+        private bool _isInteractableImageActive = true;
 
         public virtual void Start()
         {
@@ -23,22 +25,24 @@ namespace AbstractClasses
 
         public virtual void StartInteract()
         {
-            _onInteract = true;
+            playerStateController.CurrentPlayerState = PlayerStateController.PlayerState.Interact;
+            _isInteractableImageActive = false;
         }
 
         public virtual void StopInteract()
         {
-            _onInteract = false;
+            playerStateController.CurrentPlayerState = PlayerStateController.PlayerState.Mining;
+            _isInteractableImageActive = true;
         }
 
         private void CalculateInteractImageState()
         {
-            if (_onInteract)
+            if (!_isInteractableImageActive)
             {
                 interactImage.SetActive(false);
                 return;
             }
-        
+
             if (Physics2D.OverlapCircle(transform.position, checkPlayerRadius, whatIsPlayer))
                 SetInteractableImageTo(true);
             else
@@ -52,7 +56,7 @@ namespace AbstractClasses
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawWireSphere(transform.position,checkPlayerRadius);
+            Gizmos.DrawWireSphere(transform.position, checkPlayerRadius);
         }
     }
 }

@@ -1,6 +1,5 @@
 using AbstractClasses;
 using Cinemachine;
-using Player;
 using UnityEngine;
 
 namespace UI
@@ -10,28 +9,20 @@ namespace UI
         [Header("War Panel Controller Values")]
         [SerializeField] private CinemachineVirtualCamera defaultCam;
         [SerializeField] private CinemachineVirtualCamera warCam;
-        [SerializeField] private PlayerStateController playerStateController;
-        [SerializeField] private GameObject informationPanel;
-
-        public override void Start()
-        {
-            base.Start();
-            informationPanel.SetActive(false);
-        }
+        [SerializeField] private WarPanelInformationUIController warPanelInformationUIController;
 
         public override void StartInteract()
         {
             base.StartInteract();
             GivePriorityCam(warCam,defaultCam);
-            playerStateController.CurrentPlayerState = PlayerStateController.PlayerState.Fight;
-            informationPanel.SetActive(true);
+            warPanelInformationUIController.OpenInformationUIPanel(true);
         }
 
         public override void StopInteract()
         {
             base.StopInteract();
             GivePriorityCam(defaultCam,warCam);
-            playerStateController.CurrentPlayerState = PlayerStateController.PlayerState.Mining;
+            warPanelInformationUIController.OpenInformationUIPanel(false);
         }
 
         private void GivePriorityCam(CinemachineVirtualCamera priorityCam, CinemachineVirtualCamera otherCam)

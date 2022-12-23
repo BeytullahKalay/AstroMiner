@@ -8,7 +8,7 @@ namespace Player
         public enum  PlayerState
         {
             Mining,
-            Fight
+            Interact
         }
     }
 }
