@@ -369,6 +369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectActions: {fileID: 270677252}
   collectLineRendererManager: {fileID: 270677254}
+  setMoveSpeedOnCollect: {fileID: 270677255}
 --- !u!114 &60501291
 MonoBehaviour:
   m_ObjectHideFlags: 0

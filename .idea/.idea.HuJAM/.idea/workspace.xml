@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="" />
+    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectOrbMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectOrbMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,7 +20,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/SCOB/RockTypeHolder/RockTypeHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AbstractClasses/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/AbstractClasses/Collectible.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/ICollectInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Orb/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectLineRenderer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -110,6 +114,7 @@
       <workItem from="1671717468150" duration="6053000" />
       <workItem from="1671788256820" duration="13182000" />
       <workItem from="1671908870348" duration="8113000" />
+      <workItem from="1671956779290" duration="927000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
