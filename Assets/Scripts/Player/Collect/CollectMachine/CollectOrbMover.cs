@@ -40,7 +40,7 @@ namespace Player.Collect.CollectMachine
                 
                 // clear set move speed
                 setMoveSpeedOnCollect.SetMoveSpeed(0);
-            }
+            }   
         }
 
         private void PrepareOrbsToTween()
