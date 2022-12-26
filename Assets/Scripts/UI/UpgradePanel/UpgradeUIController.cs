@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UI
+namespace UI.UpgradePanel
 {
     public class UpgradeUIController : MonoBehaviour
     {
@@ -26,18 +26,16 @@ namespace UI
         {
             _currentUpgradeAmount++;
             Instantiate(upgradeProcessImage, upgradeLevelParentTransform, true);
-
             CheckIsUpgradeable();
         }
 
         private void CheckIsUpgradeable()
         {
-            if (_currentUpgradeAmount >= maxUpgradeAmount)
-            {
-                upgradeButton.SetActive(false);
-                maxText.SetActive(true);
-                IsUpgradeable = false;
-            }
+            if (_currentUpgradeAmount < maxUpgradeAmount) return;
+            
+            upgradeButton.SetActive(false);
+            maxText.SetActive(true);
+            IsUpgradeable = false;
         }
     }
 }

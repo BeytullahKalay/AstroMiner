@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace UI
+namespace UI.WarPanel
 {
     public class WarPanelInformationUIController : MonoBehaviour
     {

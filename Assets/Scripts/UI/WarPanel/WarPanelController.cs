@@ -2,7 +2,7 @@ using AbstractClasses;
 using Cinemachine;
 using UnityEngine;
 
-namespace UI
+namespace UI.WarPanel
 {
     public class WarPanelController : InteractActionController
     {

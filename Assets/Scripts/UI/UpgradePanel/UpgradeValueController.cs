@@ -3,7 +3,7 @@ using Player.Collect;
 using Player.Interact;
 using UnityEngine;
 
-namespace UI
+namespace UI.UpgradePanel
 {
     public class UpgradeValueController : MonoBehaviour
     {

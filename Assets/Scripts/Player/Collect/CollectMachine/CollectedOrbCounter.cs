@@ -8,8 +8,7 @@ namespace Player.Collect.CollectMachine
     public class CollectedOrbCounter : MonoBehaviour
     {
         private readonly Dictionary<Type, int> _counterDictionary = new Dictionary<Type, int>();
-
-
+        
         public void Collect(Collectible collectible)
         {
             if (!_counterDictionary.ContainsKey(collectible.GetType()))
@@ -20,6 +19,11 @@ namespace Player.Collect.CollectMachine
             {
                 _counterDictionary[collectible.GetType()]++;
             }
+        }
+
+        public Dictionary<Type, int> GetCounterDictionary()
+        {
+            return _counterDictionary;
         }
     }
 }

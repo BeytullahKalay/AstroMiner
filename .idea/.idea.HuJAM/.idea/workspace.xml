@@ -4,9 +4,21 @@
     <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectOrbMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectOrbMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectOrbTweenActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectOrbTweenActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Test.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Test.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectedOrbCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectedOrbCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanelController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanelController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanelUIController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanelUIController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradeUIController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradeUIController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradeValueController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradeValueController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/WarPanelController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/WarPanelController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/WarPanelInformationUIController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/WarPanelInformationUIController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpgradeManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UpgradeManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerStateController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocks/RockTypePicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UpgradeUIController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UpgradeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradeCostController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Samples~/Cinemachine Example Scenes/Scenes/Anywhere Door/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -121,7 +132,8 @@
       <workItem from="1671956779290" duration="1937000" />
       <workItem from="1671969985878" duration="1547000" />
       <workItem from="1671972824198" duration="6256000" />
-      <workItem from="1671986895361" duration="1049000" />
+      <workItem from="1671986895361" duration="1325000" />
+      <workItem from="1672054369647" duration="7303000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
@@ -368,7 +380,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671957756769</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="add: generic collecting orb feature">
+      <created>1671988107604</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1671988107604</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,8 +409,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add: selection image, image animation and following orb feature" />
-    <MESSAGE value="add: collecting material feature" />
     <MESSAGE value="add: orb connection and releasing actions feature" />
     <MESSAGE value="modified: scene" />
     <MESSAGE value="add: object pooling system to line renderer feature" />
@@ -415,6 +432,8 @@
     <MESSAGE value="fixed: detecting last interact bug" />
     <MESSAGE value="add: orb collect move animation" />
     <MESSAGE value="fixed: speed setter bug on orb collect" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed: speed setter bug on orb collect" />
+    <MESSAGE value="add: collecting generic orb feature" />
+    <MESSAGE value="add: generic collecting orb feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: generic collecting orb feature" />
   </component>
 </project>
