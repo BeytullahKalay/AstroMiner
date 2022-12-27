@@ -23,9 +23,12 @@ namespace AbstractClasses
 
         private Rigidbody2D _rb;
 
+        protected OrbType Type;
 
-        private void Awake()
+
+        protected virtual void Awake()
         {
+            
             _followPlayer = GetComponent<FollowPlayer>();
             _connectAndRelease = GetComponent<ConnectAndRelease>();
             _collider = GetComponent<Collider2D>();
@@ -73,6 +76,11 @@ namespace AbstractClasses
             
             // make rigidbody kinematic
             _rb.isKinematic = true;
+        }
+
+        public OrbType GetOrbType()
+        {
+            return Type;
         }
     }
 }

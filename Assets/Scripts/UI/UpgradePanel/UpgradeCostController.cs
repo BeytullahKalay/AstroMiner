@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using CollectMachine;
 using UnityEngine;
@@ -42,24 +41,23 @@ namespace UI.UpgradePanel
             
             foreach (var cost in checkUpgradeCostType)
             {
-                if (!collectedOrbsDictionary.ContainsKey(cost.GetCostClassType())) return false;
+                if (!collectedOrbsDictionary.ContainsKey(cost.OrbType)) return false;
 
-                if (collectedOrbsDictionary[cost.GetCostClassType()] < cost.OrbCost) return false;
+                if (collectedOrbsDictionary[cost.OrbType] < cost.OrbCost) return false;
             }
 
             TakeTheCost(checkUpgradeCostType,collectedOrbsDictionary);
             
-            Debug.Log("Here");
             _updateCollectedOrbsTexts.UpdateTexts(collectedOrbsDictionary);
 
             return true;
         }
 
-        private void TakeTheCost(Cost[] costs, Dictionary<Type,int> collectedOrbsDictionary)
+        private void TakeTheCost(Cost[] costs, Dictionary<OrbType,int> collectedOrbsDictionary)
         {
             foreach (var cost in costs)
             {
-                collectedOrbsDictionary[cost.GetCostClassType()] -= cost.OrbCost;
+                collectedOrbsDictionary[cost.OrbType] -= cost.OrbCost;
             }
         }
     }

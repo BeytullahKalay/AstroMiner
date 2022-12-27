@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using AbstractClasses;
 using UI.UpgradePanel;
@@ -10,7 +9,7 @@ namespace CollectMachine
     [RequireComponent(typeof(UpdateCollectedOrbsTexts))]
     public class CollectedOrbCounter : MonoBehaviour
     {
-        private readonly Dictionary<Type, int> _counterDictionary = new Dictionary<Type, int>();
+        private readonly Dictionary<OrbType, int> _counterDictionary = new Dictionary<OrbType, int>();
         
         private UpdateCollectedOrbsTexts _updateCollectedOrbsTexts;
         
@@ -22,15 +21,15 @@ namespace CollectMachine
         
         public void Collect(Collectible collectible)
         {
-            if (!_counterDictionary.ContainsKey(collectible.GetType()))
-                _counterDictionary.Add(collectible.GetType(),1);
+            if (!_counterDictionary.ContainsKey(collectible.GetOrbType()))
+                _counterDictionary.Add(collectible.GetOrbType(),1);
             else
-                _counterDictionary[collectible.GetType()]++;
+                _counterDictionary[collectible.GetOrbType()]++;
             
             _updateCollectedOrbsTexts.UpdateTexts(_counterDictionary);
         }
 
-        public Dictionary<Type, int> GetCounterDictionary()
+        public Dictionary<OrbType, int> GetCounterDictionary()
         {
             return _counterDictionary;
         }
