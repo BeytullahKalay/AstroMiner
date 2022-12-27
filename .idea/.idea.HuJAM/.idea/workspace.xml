@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectMachine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectMachine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectMachinePlayerDetector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectMachinePlayerDetector.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectOrbMover.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectOrbMover.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectOrbTweenActions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectOrbTweenActions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectedOrbCounter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectMachine/CollectedOrbCounter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradeCostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradeCostController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +118,7 @@
       <workItem from="1671972824198" duration="6256000" />
       <workItem from="1671986895361" duration="1325000" />
       <workItem from="1672054369647" duration="7383000" />
-      <workItem from="1672131742036" duration="13239000" />
+      <workItem from="1672131742036" duration="13312000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
@@ -396,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672062900042</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="modified: circle &#10;add: ui images and getting upgrade with orbs">
+      <created>1672146937340</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1672146937340</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +408,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="modified: scene" />
     <MESSAGE value="add: object pooling system to line renderer feature" />
     <MESSAGE value="add: cover tiles and border tiles feature" />
     <MESSAGE value="fixed: tile changing bug" />
@@ -443,6 +432,7 @@
     <MESSAGE value="add: collecting generic orb feature" />
     <MESSAGE value="add: generic collecting orb feature" />
     <MESSAGE value="add: upgrade panel controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: upgrade panel controller" />
+    <MESSAGE value="modified: circle &#10;add: ui images and getting upgrade with orbs" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified: circle &#10;add: ui images and getting upgrade with orbs" />
   </component>
 </project>
