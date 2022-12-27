@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Player.Collect.CollectMachine
+namespace CollectMachine
 {
     [RequireComponent(typeof(CollectOrbMover))]
     public class CollectMachine : MonoBehaviour

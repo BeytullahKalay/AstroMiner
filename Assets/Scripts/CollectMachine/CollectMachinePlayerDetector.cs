@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Player.Collect.CollectMachine
+namespace CollectMachine
 {
     public class CollectMachinePlayerDetector : MonoBehaviour
     {

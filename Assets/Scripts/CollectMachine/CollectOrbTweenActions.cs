@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using AbstractClasses;
-using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
 
-namespace Player.Collect.CollectMachine
+namespace CollectMachine
 {
     [RequireComponent(typeof(CollectedOrbCounter))]
     public class CollectOrbTweenActions : MonoBehaviour
@@ -30,6 +30,7 @@ namespace Player.Collect.CollectMachine
                         {
                             // call here collect orb completely
                             _collectedOrbCounter.Collect(collectible);
+                            Destroy(collectible.gameObject);
                         }).AsyncWaitForPosition(.25f);
             }
         }

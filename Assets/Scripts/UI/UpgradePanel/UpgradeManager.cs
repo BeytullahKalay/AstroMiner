@@ -34,7 +34,6 @@ namespace UI.UpgradePanel
 
         private void UpgradeSpeed(bool isUpgradable)
         {
-            Debug.Log("upgrade speed");
             if (isUpgradable)
             {
                 _upgradePanelUIController.FlySpeed.Upgrade();
@@ -44,7 +43,6 @@ namespace UI.UpgradePanel
 
         private void UpgradeRockDamage(bool isUpgradable)
         {
-            Debug.Log("upgrade rock damage");
             if (isUpgradable)
             {
                 _upgradePanelUIController.RockDamage.Upgrade();
@@ -54,7 +52,6 @@ namespace UI.UpgradePanel
 
         private void UpgradeCarryingPower(bool isUpgradable)
         {
-            Debug.Log("upgrade carrying power");
             if (isUpgradable)
             {
                 _upgradePanelUIController.CarryingPower.Upgrade();

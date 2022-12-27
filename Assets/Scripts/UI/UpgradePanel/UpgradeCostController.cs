@@ -1,51 +1,66 @@
 using System;
 using System.Collections.Generic;
-using Player.Collect.CollectMachine;
+using CollectMachine;
 using UnityEngine;
 
 namespace UI.UpgradePanel
 {
+    [RequireComponent(typeof(UpdateCollectedOrbsTexts))]
     public class UpgradeCostController : MonoBehaviour
     {
         [SerializeField] private CollectedOrbCounter collectedOrbCounter;
 
         [SerializeField] private Cost[] flyUpgradeCost;
-        [SerializeField] private Cost[] speedUpgradeCost;
+        [SerializeField] private Cost[] carryUpgradeCost;
         [SerializeField] private Cost[] rockDamageUpgradeCost;
-        
-        private Dictionary<Type, int> _counterDictionary;
-        
+
+        private UpdateCollectedOrbsTexts _updateCollectedOrbsTexts;
+
         private void Awake()
         {
-            _counterDictionary = collectedOrbCounter.GetCounterDictionary();
+            _updateCollectedOrbsTexts = GetComponent<UpdateCollectedOrbsTexts>();
         }
 
         public bool IsFlySpeedPurchasable()
         {
-            return true;
+            return CheckCost(flyUpgradeCost);
         }
 
         public bool IsRockDamagePurchasable()
         {
-            return true;
+            return CheckCost(rockDamageUpgradeCost);
         }
 
         public bool IsCarryingPowerPurchasable()
         {
+            return CheckCost(carryUpgradeCost);
+        }
+
+        private bool CheckCost(Cost[] checkUpgradeCostType)
+        {
+            var collectedOrbsDictionary = collectedOrbCounter.GetCounterDictionary();
+            
+            foreach (var cost in checkUpgradeCostType)
+            {
+                if (!collectedOrbsDictionary.ContainsKey(cost.GetCostClassType())) return false;
+
+                if (collectedOrbsDictionary[cost.GetCostClassType()] < cost.OrbCost) return false;
+            }
+
+            TakeTheCost(checkUpgradeCostType,collectedOrbsDictionary);
+            
+            Debug.Log("Here");
+            _updateCollectedOrbsTexts.UpdateTexts(collectedOrbsDictionary);
+
             return true;
         }
-    }
 
-    [Serializable]
-    public struct Cost
-    {
-        public OrbType Orb;
-        public int OrbCost;
-
-        public enum OrbType
+        private void TakeTheCost(Cost[] costs, Dictionary<Type,int> collectedOrbsDictionary)
         {
-            Blue,
-            Yellow
+            foreach (var cost in costs)
+            {
+                collectedOrbsDictionary[cost.GetCostClassType()] -= cost.OrbCost;
+            }
         }
     }
 }
