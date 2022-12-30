@@ -7,8 +7,6 @@ namespace UI.UpgradePanel
     {
         public void UpdateTexts(Dictionary<OrbType, int> dictionary)
         {
-            Debug.Log("Called Update Texts");
-            
             foreach (var key in dictionary)
             {
                 OrbCounterPanel.UpdateText?.Invoke(key);
