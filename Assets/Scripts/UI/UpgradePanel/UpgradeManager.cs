@@ -1,14 +1,15 @@
 using System;
+using UI.UpgradePanel.Cost;
 using UnityEngine;
 
 namespace UI.UpgradePanel
 {
-    [RequireComponent(typeof(UpgradePanelUIController))]
+    [RequireComponent(typeof(UpgradePanelUIControllers))]
     [RequireComponent(typeof(UpgradeValueController))]
     [RequireComponent(typeof(UpgradeCostController))]
     public class UpgradeManager : MonoBehaviour
     {
-        private UpgradePanelUIController _upgradePanelUIController;
+        private UpgradePanelUIControllers _upgradePanelUIControllers;
         private UpgradeValueController _upgradeValueController;
         private UpgradeCostController _upgradeCostController;
 
@@ -20,10 +21,11 @@ namespace UI.UpgradePanel
         {
             AssignActionFunctions();
 
-            _upgradePanelUIController = GetComponent<UpgradePanelUIController>();
+            _upgradePanelUIControllers = GetComponent<UpgradePanelUIControllers>();
             _upgradeValueController = GetComponent<UpgradeValueController>();
             _upgradeCostController = GetComponent<UpgradeCostController>();
         }
+        
 
         private void AssignActionFunctions()
         {
@@ -36,7 +38,7 @@ namespace UI.UpgradePanel
         {
             if (isUpgradable)
             {
-                _upgradePanelUIController.FlySpeed.Upgrade();
+                _upgradePanelUIControllers.FlySpeed.OnUpgrade();
                 _upgradeValueController.UpgradeSpeed();
             }
         }
@@ -45,7 +47,7 @@ namespace UI.UpgradePanel
         {
             if (isUpgradable)
             {
-                _upgradePanelUIController.RockDamage.Upgrade();
+                _upgradePanelUIControllers.RockDamage.OnUpgrade();
                 _upgradeValueController.UpgradeRockDamage();
             }
         }
@@ -54,7 +56,7 @@ namespace UI.UpgradePanel
         {
             if (isUpgradable)
             {
-                _upgradePanelUIController.CarryingPower.Upgrade();
+                _upgradePanelUIControllers.CarryingPower.OnUpgrade();
                 _upgradeValueController.UpgradeCarryingPower();
             }
         }
@@ -62,21 +64,21 @@ namespace UI.UpgradePanel
         // used by unity event
         public void CallUpgradeSpeed()
         {
-            _upgradeSpeedAction?.Invoke(_upgradePanelUIController.FlySpeed.IsUpgradeable &&
+            _upgradeSpeedAction?.Invoke(_upgradePanelUIControllers.FlySpeed.IsUpgradeable &&
                                         _upgradeCostController.IsFlySpeedPurchasable());
         }
 
         // used by unity event
         public void CallUpgradeRockDamage()
         {
-            _upgradeRockDamageAction?.Invoke(_upgradePanelUIController.RockDamage.IsUpgradeable &&
+            _upgradeRockDamageAction?.Invoke(_upgradePanelUIControllers.RockDamage.IsUpgradeable &&
                                              _upgradeCostController.IsRockDamagePurchasable());
         }
 
         // used by unity event
         public void CallUpgradeCarryingPower()
         {
-            _upgradeCarryingAction?.Invoke(_upgradePanelUIController.CarryingPower.IsUpgradeable &&
+            _upgradeCarryingAction?.Invoke(_upgradePanelUIControllers.CarryingPower.IsUpgradeable &&
                                            _upgradeCostController.IsCarryingPowerPurchasable());
         }
     }

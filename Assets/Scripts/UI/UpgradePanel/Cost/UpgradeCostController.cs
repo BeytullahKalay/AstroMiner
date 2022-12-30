@@ -1,17 +1,18 @@
 using System.Collections.Generic;
 using CollectMachine;
+using Structs;
 using UnityEngine;
 
-namespace UI.UpgradePanel
+namespace UI.UpgradePanel.Cost
 {
     [RequireComponent(typeof(UpdateCollectedOrbsTexts))]
     public class UpgradeCostController : MonoBehaviour
     {
         [SerializeField] private CollectedOrbCounter collectedOrbCounter;
 
-        [SerializeField] private Cost[] flyUpgradeCost;
-        [SerializeField] private Cost[] carryUpgradeCost;
-        [SerializeField] private Cost[] rockDamageUpgradeCost;
+        [SerializeField] private TypeAndCost[] flyUpgradeCost;
+        [SerializeField] private TypeAndCost[] carryUpgradeCost;
+        [SerializeField] private TypeAndCost[] rockDamageUpgradeCost;
 
         private UpdateCollectedOrbsTexts _updateCollectedOrbsTexts;
 
@@ -35,7 +36,7 @@ namespace UI.UpgradePanel
             return CheckCost(carryUpgradeCost);
         }
 
-        private bool CheckCost(Cost[] checkUpgradeCostType)
+        private bool CheckCost(TypeAndCost[] checkUpgradeCostType)
         {
             var collectedOrbsDictionary = collectedOrbCounter.GetCounterDictionary();
             
@@ -53,12 +54,27 @@ namespace UI.UpgradePanel
             return true;
         }
 
-        private void TakeTheCost(Cost[] costs, Dictionary<OrbType,int> collectedOrbsDictionary)
+        private void TakeTheCost(TypeAndCost[] costs, Dictionary<OrbType,int> collectedOrbsDictionary)
         {
             foreach (var cost in costs)
             {
                 collectedOrbsDictionary[cost.OrbType] -= cost.OrbCost;
             }
+        }
+
+        public TypeAndCost[] GetFlyUpgradeCosts()
+        {
+            return flyUpgradeCost;
+        }
+        
+        public TypeAndCost[] GetCarryUpgradeCosts()
+        {
+            return carryUpgradeCost;
+        }
+        
+        public TypeAndCost[] GetRockDamageUpgradeCosts()
+        {
+            return rockDamageUpgradeCost;
         }
     }
 }

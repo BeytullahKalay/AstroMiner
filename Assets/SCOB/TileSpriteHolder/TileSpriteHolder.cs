@@ -1,21 +1,23 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-
-[CreateAssetMenu(fileName = "TileSpriteType", menuName = "ScriptableObjects/TileSpriteTypeHolder")]
-public class TileSpriteHolder : ScriptableObject
+namespace SCOB.TileSpriteHolder
 {
-    [SerializeField] private Tile yellow;
-    [SerializeField] private Tile blue;
-
-
-    public Tile GetYellowRockSprite()
+    [CreateAssetMenu(fileName = "TileSpriteType", menuName = "ScriptableObjects/TileSpriteTypeHolder")]
+    public class TileSpriteHolder : ScriptableObject
     {
-        return yellow;
-    }
+        [SerializeField] private Tile yellow;
+        [SerializeField] private Tile blue;
+
+
+        public Tile GetYellowRockSprite()
+        {
+            return yellow;
+        }
     
-    public Tile GetBlueRockSprite()
-    {
-        return blue;
+        public Tile GetBlueRockSprite()
+        {
+            return blue;
+        }
     }
 }

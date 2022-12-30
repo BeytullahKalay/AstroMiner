@@ -1,7 +1,12 @@
+using SCOB.RockTypeHolder;
+using SCOB.TileSpriteHolder;
+using SCOB.UISpriteDecider;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    #region Singleton
+
     public static GameManager Instance;
 
     private void Awake()
@@ -16,8 +21,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    #endregion
+   
+
     [SerializeField] private RockTypeHolder rockTypeHolder;
     [SerializeField] private TileSpriteHolder tileSpriteHolder;
+    [SerializeField] private UISpriteHolder uiSpriteHolder;
 
     public RockMaterial GetMaterial(RockType rockType)
     {
@@ -27,5 +36,10 @@ public class GameManager : MonoBehaviour
     public TileSpriteHolder GetTileSpriteHolder()
     {
         return tileSpriteHolder;
+    }
+
+    public UISpriteHolder GetUISpriteHolder()
+    {
+        return uiSpriteHolder;
     }
 }

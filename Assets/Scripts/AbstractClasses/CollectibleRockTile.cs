@@ -1,3 +1,4 @@
+using SCOB.RockTypeHolder;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 

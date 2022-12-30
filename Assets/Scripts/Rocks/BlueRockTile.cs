@@ -1,5 +1,6 @@
 
 using AbstractClasses;
+using SCOB.RockTypeHolder;
 
 namespace Rocks
 {
