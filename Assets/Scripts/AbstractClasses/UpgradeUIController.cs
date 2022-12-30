@@ -35,7 +35,7 @@ namespace AbstractClasses
 
         public virtual void Start()
         {
-            CreateShowerAndText();
+            SetCostImageAndText();
             InitializeUpgradeable();
         }
 
@@ -67,8 +67,9 @@ namespace AbstractClasses
             costTransform.gameObject.SetActive(false);
         }
 
-        protected virtual void CreateShowerAndText()
+        public virtual void SetCostImageAndText()
         {
+            if(!IsUpgradeable) return;
         }
     }
 }

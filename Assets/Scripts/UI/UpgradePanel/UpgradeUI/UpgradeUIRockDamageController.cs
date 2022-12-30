@@ -4,15 +4,17 @@ namespace UI.UpgradePanel.UpgradeUI
 {
     public class UpgradeUIRockDamageController : UpgradeUIController
     {
-        protected override void CreateShowerAndText()
+        public override void SetCostImageAndText()
         {
+            base.SetCostImageAndText();
+            
             foreach (var rockDamageCost  in upgradeCost.GetRockDamageUpgradeCosts())
             {
                 foreach (var costImage in UISpriteHolder.CostImages)
                 {
                     if (rockDamageCost.OrbType == costImage.OrbType)
                     {
-                        UpgradeCostShowerController.CreateCostImageAndText(costImage,rockDamageCost.OrbCost);
+                        UpgradeCostShowerController.SetCostImageAndText(costImage,rockDamageCost.OrbCost);
                     }
                 }
             }
