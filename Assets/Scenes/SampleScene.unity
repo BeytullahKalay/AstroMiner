@@ -993,6 +993,7 @@ MonoBehaviour:
   upgradeButton: {fileID: 1369642801}
   maxText: {fileID: 2063955694}
   upgradeLevelParentTransform: {fileID: 1762808927}
+  costTransform: {fileID: 1763824952}
   maxUpgradeAmount: 4
 --- !u!114 &239424721
 MonoBehaviour:
@@ -15282,6 +15283,7 @@ MonoBehaviour:
   upgradeButton: {fileID: 1585171978}
   maxText: {fileID: 841836914}
   upgradeLevelParentTransform: {fileID: 1727628155}
+  costTransform: {fileID: 455079854}
   maxUpgradeAmount: 4
 --- !u!114 &977343834
 MonoBehaviour:
@@ -23014,9 +23016,9 @@ MonoBehaviour:
   setMoveSpeedOnCollect: {fileID: 270677255}
   playerMovement: {fileID: 270677257}
   playerRockInteract: {fileID: 270677242}
-  upgradeMoveMaxVelocity: 5
-  upgradeMoveAcceleration: 10
-  upgradeCarryingAmountWithoutPenalty: 2
+  upgradeMoveMaxVelocity: 2
+  upgradeMoveAcceleration: 5
+  upgradeCarryingAmountWithoutPenalty: 1
   upgradeRockDamage: 15
 --- !u!114 &1313494530
 MonoBehaviour:
@@ -26787,6 +26789,7 @@ MonoBehaviour:
   upgradeButton: {fileID: 331357484}
   maxText: {fileID: 1418296124}
   upgradeLevelParentTransform: {fileID: 1007401094}
+  costTransform: {fileID: 237418612}
   maxUpgradeAmount: 4
 --- !u!114 &2107429346
 MonoBehaviour:

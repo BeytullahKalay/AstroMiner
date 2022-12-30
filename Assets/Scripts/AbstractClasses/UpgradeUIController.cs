@@ -15,6 +15,7 @@ namespace AbstractClasses
         [SerializeField] private GameObject maxText;
 
         [SerializeField] private Transform upgradeLevelParentTransform;
+        [SerializeField] private Transform costTransform;
 
         [SerializeField] private int maxUpgradeAmount;
         
@@ -63,6 +64,7 @@ namespace AbstractClasses
             upgradeButton.SetActive(false);
             maxText.SetActive(true);
             IsUpgradeable = false;
+            costTransform.gameObject.SetActive(false);
         }
 
         protected virtual void CreateShowerAndText()

@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="removed: debug log">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SCOB/RockTypeHolder/RockTypeHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SCOB/RockTypeHolder/RockTypeHolder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstractClasses/CollectibleRockTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstractClasses/CollectibleRockTile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cost.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cost.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocks/BlueRockTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/BlueRockTile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rocks/YellowRockTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rocks/YellowRockTile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradeCostController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradeCostController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradeManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradePanelUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradePanelUIControllers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradePanelUIController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradePanelUIControllers.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradeUIController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradePanel/UpgradeUIController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="add: show cost feature" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +28,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Interact/DetectInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerRockInteract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerStateController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Rocks/BlueRockTile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocks/RockTypePicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Structs/CostImage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test.cs" root0="FORCE_HIGHLIGHTING" />
@@ -141,7 +123,7 @@
       <workItem from="1672054369647" duration="7383000" />
       <workItem from="1672131742036" duration="13312000" />
       <workItem from="1672160216958" duration="6210000" />
-      <workItem from="1672388670166" duration="14633000" />
+      <workItem from="1672388670166" duration="15461000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
@@ -423,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672397341169</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="add: show cost feature">
+      <created>1672409907310</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1672409907310</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +434,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fixed: tile changing bug" />
     <MESSAGE value="add: tmpro" />
     <MESSAGE value="fixed: tile hit effect bug" />
     <MESSAGE value="add: carrying penalty feature" />
@@ -470,6 +458,7 @@
     <MESSAGE value="modified: circle &#10;add: ui images and getting upgrade with orbs" />
     <MESSAGE value="add: orb amount shower" />
     <MESSAGE value="removed: debug log" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed: debug log" />
+    <MESSAGE value="add: show cost feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: show cost feature" />
   </component>
 </project>
