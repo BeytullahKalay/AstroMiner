@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +125,7 @@
       <workItem from="1672131742036" duration="13312000" />
       <workItem from="1672160216958" duration="6210000" />
       <workItem from="1672388670166" duration="20934000" />
-      <workItem from="1672435725958" duration="6527000" />
+      <workItem from="1672435725958" duration="6630000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
@@ -432,7 +428,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672418510908</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="add: panel UI images">
+      <created>1672443018434</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1672443018434</updated>
+    </task>
+    <task id="LOCAL-00045" summary="add: machine gun controller and control state feature">
+      <created>1672443035147</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1672443035147</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,8 +464,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add: carrying penalty feature" />
-    <MESSAGE value="modified: collectible action made generic" />
     <MESSAGE value="modified: orb class to collectible class" />
     <MESSAGE value="modified: orb class to collectible class and removed ICollectible interface" />
     <MESSAGE value="modified: CollectibleRock.cs name to CollectibleRock.cs.meta" />
@@ -479,6 +487,8 @@
     <MESSAGE value="add: show cost feature" />
     <MESSAGE value="add: closing cost shower images on upgrade max feature" />
     <MESSAGE value="add: changing cost on taking new upgrade feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: changing cost on taking new upgrade feature" />
+    <MESSAGE value="add: panel UI images" />
+    <MESSAGE value="add: machine gun controller and control state feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: machine gun controller and control state feature" />
   </component>
 </project>
