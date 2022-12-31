@@ -11,13 +11,11 @@ namespace Player.Interact
         private IInteractInput _interactInput;
         private DetectInteract _detectInteract;
         private InteractActionController _interactActionController;
-        private PlayerStateController _playerStateController;
 
         private void Awake()
         {
             _interactInput = GetComponent<IInteractInput>();
             _detectInteract = GetComponent<DetectInteract>();
-            _playerStateController = GetComponent<PlayerStateController>();
         }
 
         private void Update()
@@ -29,7 +27,7 @@ namespace Player.Interact
         private void CheckInteract()
         {
             if (!Input.GetKeyDown(_interactInput.InteractInput) || 
-                _playerStateController.CurrentPlayerState == PlayerStateController.PlayerState.Interact) return;
+                PlayerStateController.Instance.CurrentPlayerState == PlayerStateController.PlayerState.Interact) return;
 
             if (_detectInteract.GetInteractableArray().Length > 1)
                 Debug.LogError("More than one interactable!");

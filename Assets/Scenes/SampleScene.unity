@@ -23068,7 +23068,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactImage: {fileID: 807120743}
-  playerStateController: {fileID: 270677260}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -23609,7 +23608,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactImage: {fileID: 662380242}
-  playerStateController: {fileID: 270677260}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
@@ -23877,7 +23875,7 @@ GameObject:
   - component: {fileID: 1398848218}
   - component: {fileID: 1398848219}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26835,6 +26833,8 @@ GameObject:
   - component: {fileID: 1985236261}
   - component: {fileID: 1985236262}
   - component: {fileID: 1985236260}
+  - component: {fileID: 1985236264}
+  - component: {fileID: 1985236263}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -26870,7 +26870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb63a73ce11c98479fe0208583395a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStateController: {fileID: 270677260}
 --- !u!114 &1985236261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26897,6 +26896,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateSpeed: 35
   minMaxRotationZ: {x: -87, y: 87}
+--- !u!114 &1985236263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985236257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d033e26db2616741bd029ef247d61ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireAmountInOneSeconds: 3
+  firePoint: {fileID: 1398848218}
+  bullet: {fileID: 3773320033875068303, guid: bed787a324f89fa4a888739fc2fef4d3, type: 3}
+--- !u!114 &1985236264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985236257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 053d5d348cba96b44932144e03a4f39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireKey: 32
 --- !u!1 &1990930692
 GameObject:
   m_ObjectHideFlags: 0

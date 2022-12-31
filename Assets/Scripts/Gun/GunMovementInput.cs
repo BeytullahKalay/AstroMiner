@@ -6,8 +6,6 @@ namespace Gun
 {
     public class GunMovementInput : MonoBehaviour, IGunMovementInput
     {
-        [SerializeField] private PlayerStateController playerStateController;
-
         public float RotateInput { get; private set; }
 
         private void Update()
@@ -17,7 +15,7 @@ namespace Gun
 
         private void GetRotateMovementInput()
         {
-            if (playerStateController.CurrentPlayerState != PlayerStateController.PlayerState.Interact) return;
+            if (PlayerStateController.Instance.CurrentPlayerState != PlayerStateController.PlayerState.Interact) return;
 
             RotateInput = -Input.GetAxisRaw("Horizontal");
         }

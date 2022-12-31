@@ -7,7 +7,6 @@ namespace AbstractClasses
     {
         [Header("Interact Action Controller Values")] [SerializeField]
         private GameObject interactImage;
-        [SerializeField] private PlayerStateController playerStateController;
         [SerializeField] private LayerMask whatIsPlayer;
         [SerializeField] private float checkPlayerRadius = 4f;
 
@@ -25,13 +24,13 @@ namespace AbstractClasses
 
         public virtual void StartInteract()
         {
-            playerStateController.CurrentPlayerState = PlayerStateController.PlayerState.Interact;
+            PlayerStateController.Instance.CurrentPlayerState = PlayerStateController.PlayerState.Interact;
             _isInteractableImageActive = false;
         }
 
         public virtual void StopInteract()
         {
-            playerStateController.CurrentPlayerState = PlayerStateController.PlayerState.Mining;
+            PlayerStateController.Instance.CurrentPlayerState = PlayerStateController.PlayerState.Mining;
             _isInteractableImageActive = true;
         }
 

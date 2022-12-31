@@ -8,7 +8,6 @@ namespace Player
         public float MaxVelocity = 5f;
         public float AccelerationSpeed = 5f;
 
-        private PlayerStateController _stateController;
 
         private float _currentMaxVelocity;
     
@@ -16,7 +15,6 @@ namespace Player
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
-            _stateController = GetComponent<PlayerStateController>();
         }
 
         private void Start()
@@ -27,7 +25,7 @@ namespace Player
         public void MovePlayer(Vector2 movementVector2)
         {
             // Check player state
-            if (_stateController.CurrentPlayerState != PlayerStateController.PlayerState.Mining) return;
+            if (PlayerStateController.Instance.CurrentPlayerState != PlayerStateController.PlayerState.Mining) return;
         
             // move player
             _rb.AddForce(movementVector2 * AccelerationSpeed, ForceMode2D.Force);
