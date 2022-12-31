@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AbstractClasses/InteractActionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AbstractClasses/InteractActionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gun/Gun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gun/Gun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gun/GunMovementInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gun/GunMovementInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerInteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerInteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,13 +17,16 @@
     <setting file="file://$PROJECT_DIR$/Assets/SCOB/TileSpriteHolder/TileSpriteHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SCOB/UISpriteDecider/UISpriteHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AbstractClasses/Collectible.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/AbstractClasses/InteractActionController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet/BulletMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Classes/TypeAndCostLists.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollectMachine/CollectedOrbCounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enums.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Gun/Gun.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gun/Gun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gun/GunFire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gun/GunFireInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Gun/GunMovementInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/ICollectInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IFireInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interfaces/IGunMovementInput.cs" root0="FORCE_HIGHLIGHTING" />
@@ -42,8 +35,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/CollectLineRendererManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Collect/SetMoveSpeedOnCollect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Interact/DetectInteract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Player/Interact/PlayerInteract.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Interact/PlayerRockInteract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerStateController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/UnitySaves/HuJAM/Assets/Scripts/Player/PlayerStateController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rocks/RockTypePicker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Structs/CostImage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Test.cs" root0="FORCE_HIGHLIGHTING" />
@@ -140,7 +136,7 @@
       <workItem from="1672160216958" duration="6210000" />
       <workItem from="1672388670166" duration="20934000" />
       <workItem from="1672435725958" duration="6630000" />
-      <workItem from="1672523114831" duration="3740000" />
+      <workItem from="1672523114831" duration="3814000" />
     </task>
     <task id="LOCAL-00001" summary="add: rock types and spawn orbs">
       <created>1670668262217</created>
@@ -457,7 +453,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672443035147</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="add: singleton to player interact script">
+      <created>1672526929664</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1672526929664</updated>
+    </task>
+    <task id="LOCAL-00047" summary="add: gun fire speed feature and started to bullet">
+      <created>1672526951938</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1672526951938</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,8 +489,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="modified: orb class to collectible class" />
-    <MESSAGE value="modified: orb class to collectible class and removed ICollectible interface" />
     <MESSAGE value="modified: CollectibleRock.cs name to CollectibleRock.cs.meta" />
     <MESSAGE value="modified: SampleScene.unity" />
     <MESSAGE value="add: interaction image open&amp;close feature and basic interaction" />
@@ -504,6 +512,8 @@
     <MESSAGE value="add: changing cost on taking new upgrade feature" />
     <MESSAGE value="add: panel UI images" />
     <MESSAGE value="add: machine gun controller and control state feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: machine gun controller and control state feature" />
+    <MESSAGE value="add: singleton to player interact script" />
+    <MESSAGE value="add: gun fire speed feature and started to bullet" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: gun fire speed feature and started to bullet" />
   </component>
 </project>
