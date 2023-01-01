@@ -3701,6 +3701,7 @@ GameObject:
   - component: {fileID: 543296178}
   - component: {fileID: 543296179}
   - component: {fileID: 543296180}
+  - component: {fileID: 543296181}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -3742,7 +3743,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543296172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.406225, y: 0, z: 0}
+  m_LocalPosition: {x: 15.09, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3808,6 +3809,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1413612674}
+--- !u!114 &543296181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543296172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4241c7c50a5b0d347b3ef9dd3c681e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1413612670}
 --- !u!1 &548535273
 GameObject:
   m_ObjectHideFlags: 0
@@ -6834,6 +6848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 834932447}
   - component: {fileID: 834932448}
+  - component: {fileID: 834932449}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -7034,6 +7049,18 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &834932449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834932446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fef49a092c8a6246bf2fb3ab864510f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &841836914
 GameObject:
   m_ObjectHideFlags: 0
@@ -24843,7 +24870,6 @@ GameObject:
   - component: {fileID: 1413612671}
   - component: {fileID: 1413612674}
   - component: {fileID: 1413612670}
-  - component: {fileID: 1413612673}
   - component: {fileID: 1413612675}
   m_Layer: 9
   m_Name: Sprite
@@ -24920,19 +24946,6 @@ Transform:
   m_Father: {fileID: 543296176}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1413612673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413612668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fef49a092c8a6246bf2fb3ab864510f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  light2D: {fileID: 834932448}
 --- !u!95 &1413612674
 Animator:
   serializedVersion: 4
@@ -24966,9 +24979,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ease: 25
-  duration: 0.2
+  punchDuration: 0.2
   elastic: 0
   vibration: 200
+  cam: {fileID: 1216997659}
+  cameraDuration: 0.1
+  cameraShakeStrength: 0.12
+  cameraShakeVibration: 30
 --- !u!1 &1418296124
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ namespace Enemy
     [RequireComponent(typeof(EnemyStateController))]
     [RequireComponent(typeof(EnemyAttack))]
     [RequireComponent(typeof(EnemyAnimationController))]
+    [RequireComponent(typeof(EnemyFlip))]
     public class EnemyManager : MonoBehaviour
     {
         private EnemyMovement _enemyMovement;
@@ -14,6 +15,7 @@ namespace Enemy
         private EnemyStateController _enemyStateController;
         private EnemyAttack _enemyAttack;
         private EnemyAnimationController _enemyAnimationController;
+        private EnemyFlip _enemyFlip;
         
 
         private void Awake()
@@ -23,6 +25,7 @@ namespace Enemy
             _enemyStateController = GetComponent<EnemyStateController>();
             _enemyAttack = GetComponent<EnemyAttack>();
             _enemyAnimationController = GetComponent<EnemyAnimationController>();
+            _enemyFlip = GetComponent<EnemyFlip>();
         }
 
         private void Update()
@@ -30,6 +33,7 @@ namespace Enemy
             _enemyDetectWall.SetDetectPosition(_enemyMovement.Direction);
             _enemyStateController.SetStateToAttack(_enemyDetectWall.IsBaseDetected());
             _enemyAttack.Attack(_enemyStateController.EnemyState,_enemyAnimationController.PlayAttackAnim);
+            _enemyFlip.CheckFlip(_enemyMovement.Direction);
         }
 
         private void FixedUpdate()

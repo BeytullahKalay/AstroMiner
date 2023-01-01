@@ -4,10 +4,9 @@ using UnityEngine.Rendering.Universal;
 
 namespace Enemy
 {
-    [RequireComponent(typeof(SpriteRenderer))]
     public class EnemyLightSpriteController : MonoBehaviour
     {
-        [SerializeField] private Light2D light2D;
+        private Light2D _light2D;
 
         private readonly FieldInfo _lightCookieSprite =
             typeof(Light2D).GetField("m_LightCookieSprite", BindingFlags.NonPublic | BindingFlags.Instance);
@@ -16,13 +15,13 @@ namespace Enemy
 
         private void Awake()
         {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
-            light2D.lightType = Light2D.LightType.Sprite;
+            _spriteRenderer = GetComponentInParent<SpriteRenderer>();
+            _light2D = GetComponent<Light2D>();
         }
 
         private void Update()
         {
-            _lightCookieSprite.SetValue(light2D, _spriteRenderer.sprite);
+            _lightCookieSprite.SetValue(_light2D, _spriteRenderer.sprite);
         }
     }
 }
