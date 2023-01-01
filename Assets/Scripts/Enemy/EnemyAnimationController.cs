@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Enemy
@@ -19,6 +20,10 @@ namespace Enemy
             anim.SetTrigger(_dead);
         }
 
+        public void TriggerAction(Action action)
+        {
+            action?.Invoke();
+        }
         
     }
 }

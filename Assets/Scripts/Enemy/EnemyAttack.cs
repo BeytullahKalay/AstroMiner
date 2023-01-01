@@ -13,7 +13,6 @@ public class EnemyAttack : MonoBehaviour
         if (state == EnemyState.Attack && Time.time > _lastAttackTime)
         {
             attackAnimationAction?.Invoke();
-            Debug.Log("Enemy Dear Attack");
             _lastAttackTime = Time.time + 1/attackAmountInOneSecond;
         }
     }

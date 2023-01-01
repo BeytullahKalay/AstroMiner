@@ -12,6 +12,7 @@ namespace Enemy
         [SerializeField] private float elastic = .5f;
         [SerializeField] private int vibration = 10;
     
+        // used by animation event
         public void PlayPunch()
         {
             transform.DOPunchPosition(Vector3.right, duration, vibration, elastic).SetEase(_ease);

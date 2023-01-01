@@ -2494,6 +2494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 362778909}
   - component: {fileID: 362778910}
+  - component: {fileID: 362778911}
   m_Layer: 9
   m_Name: Collider
   m_TagString: Untagged
@@ -2542,6 +2543,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &362778911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362778908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5841a3887dc85b14db1f46db9889e689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  destroyAfterSeconds: 2
 --- !u!1 &389193138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3681,7 +3696,6 @@ GameObject:
   m_Component:
   - component: {fileID: 543296176}
   - component: {fileID: 543296175}
-  - component: {fileID: 543296174}
   - component: {fileID: 543296173}
   - component: {fileID: 543296177}
   - component: {fileID: 543296178}
@@ -3708,19 +3722,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1848790058}
   moveSpeed: 5
---- !u!114 &543296174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543296172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5841a3887dc85b14db1f46db9889e689, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
 --- !u!114 &543296175
 MonoBehaviour:
   m_ObjectHideFlags: 0
