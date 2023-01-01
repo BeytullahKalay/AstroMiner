@@ -11,31 +11,28 @@ namespace Player.Collect
 
         private readonly Dictionary<Collectible, GameObject> _lineRenderers = new Dictionary<Collectible, GameObject>();
 
-        private ObjectPool<GameObject> _pool;
+        private ObjectPool<GameObject> _lineRendererObjectPool;
 
         private void Start()
         {
-            _pool = new ObjectPool<GameObject>(() =>
-            {
-                return Instantiate(collectLineRenderer);
-            }, lineRenderer =>
-            {
-                lineRenderer.SetActive(true);
-            }, lineRenderer =>
-            {
-                lineRenderer.SetActive(false);
-                lineRenderer.GetComponent<LineRenderer>().SetPosition(0,Vector3.zero);
-                lineRenderer.GetComponent<LineRenderer>().SetPosition(1,Vector3.zero);
-            }, lineRenderer =>
-            {
-                Destroy(lineRenderer);
-            }, true, 10, 20);
+            InitializeLinerRendererPool();
+        }
+
+        private void InitializeLinerRendererPool()
+        {
+            _lineRendererObjectPool = new ObjectPool<GameObject>(() => { return Instantiate(collectLineRenderer); },
+                lineRenderer => { lineRenderer.SetActive(true); }, lineRenderer =>
+                {
+                    lineRenderer.SetActive(false);
+                    lineRenderer.GetComponent<LineRenderer>().SetPosition(0, Vector3.zero);
+                    lineRenderer.GetComponent<LineRenderer>().SetPosition(1, Vector3.zero);
+                }, lineRenderer => { Destroy(lineRenderer); }, true, 10, 20);
         }
 
         public void CreateConnectedLineRenderer(Transform playerTransform, Transform collectibleTransform, Collectible collectible)
         {
             // get line renderer game object
-            var rendererGameObject = _pool.Get();
+            var rendererGameObject = _lineRendererObjectPool.Get();
 
             // TODO: get rid of GetComponent
             // get collect line renderer
@@ -57,7 +54,7 @@ namespace Player.Collect
 
         public void RemoveLineRenderer(Collectible collectible)
         {
-            _pool.Release(_lineRenderers[collectible]);
+            _lineRendererObjectPool.Release(_lineRenderers[collectible]);
             _lineRenderers.Remove(collectible);
         }
     }

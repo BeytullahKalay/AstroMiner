@@ -10,7 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3773320033875068301}
   - component: {fileID: 3773320033875068300}
+  - component: {fileID: -2520882791881468025}
   - component: {fileID: 7950480601738196269}
+  - component: {fileID: 6790679760499866962}
+  - component: {fileID: 6009197370777022476}
+  - component: {fileID: 3733938014316894480}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -74,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -85,6 +89,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2520882791881468025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773320033875068303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdfdd3aa22f1ff24db81788f1de83e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7950480601738196269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,3 +114,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletMoveSpeed: 20
+--- !u!114 &6790679760499866962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773320033875068303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 899fea06999b7d2469584a5000fa86c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectHitRadius: 0.16
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &6009197370777022476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773320033875068303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ff37d48acba21f488d7648d85aaceb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3733938014316894480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773320033875068303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ca05928ad0102408fb29ffba50a1c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 25
