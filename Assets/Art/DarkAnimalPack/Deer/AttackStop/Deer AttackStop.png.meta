@@ -1,0 +1,282 @@
+fileFormatVersion: 2
+guid: b93dc50b1d33a1045b70658384bea70a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Deer Sprite 56x54 RED_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349210869a058eb45a96d2d9e74c105a
+      internalID: -539263543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deer Sprite 56x54 RED_15
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 54
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d201aee956ebe46941c2f5e8025b6b
+      internalID: 1161776216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deer Sprite 56x54 RED_16
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 54
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de00399f515c7c4caa4764c815928a8
+      internalID: -1309610373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deer Sprite 56x54 RED_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 54
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b488853f022bf447891d60d74cd5eff
+      internalID: 1260678190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Deer Sprite 56x54 RED_18
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 54
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0322e07d0ea9c643bb1f21d719d8dd6
+      internalID: 1532691329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Deer Sprite 56x54 RED_21: 1205025337
+      Deer Sprite 56x54 RED_31: 1528432446
+      Deer Sprite 56x54 RED_0: -1011651060
+      Deer Sprite 56x54 RED_10: 1483755754
+      Deer Sprite 56x54 RED_34: -288503292
+      Deer Sprite 56x54 RED_14: -539263543
+      Deer Sprite 56x54 RED_4: -1023303161
+      Deer Sprite 56x54 RED_18: 1532691329
+      Deer Sprite 56x54 RED_42: -1760899722
+      Deer Sprite 56x54 RED_1: -1683536482
+      Deer Sprite 56x54 RED_9: 1568511686
+      Deer Sprite 56x54 RED_11: 1860236210
+      Deer Sprite 56x54 RED_27: 1152846830
+      Deer Sprite 56x54 RED_41: 1473294086
+      Deer Sprite 56x54 RED_25: 1114706178
+      Deer Sprite 56x54 RED_24: -1610993927
+      Deer Sprite 56x54 RED_29: 2044546400
+      Deer Sprite 56x54 RED_28: -1158366700
+      Deer Sprite 56x54 RED_6: 851205959
+      Deer Sprite 56x54 RED_16: -1309610373
+      Deer Sprite 56x54 RED_39: 218024562
+      Deer Sprite 56x54 RED_2: -2122988859
+      Deer Sprite 56x54 RED_7: 847198866
+      Deer Sprite 56x54 RED_20: -953430922
+      Deer Sprite 56x54 RED_38: 64153405
+      Deer Sprite 56x54 RED_37: 608809387
+      Deer Sprite 56x54 RED_13: 1319088332
+      Deer Sprite 56x54 RED_33: 2001592820
+      Deer Sprite 56x54 RED_23: 501625144
+      Deer Sprite 56x54 RED_19: -647428079
+      Deer Sprite 56x54 RED_26: -2013956321
+      Deer Sprite 56x54 RED_15: 1161776216
+      Deer Sprite 56x54 RED_8: 2060308272
+      Deer Sprite 56x54 RED_36: -1912242280
+      Deer Sprite 56x54 RED_3: -1742117583
+      Deer Sprite 56x54 RED_40: 342941555
+      Deer Sprite 56x54 RED_22: 1994550551
+      Deer Sprite 56x54 RED_30: 239377777
+      Deer Sprite 56x54 RED_5: -1089031899
+      Deer Sprite 56x54 RED_12: 1932160937
+      Deer Sprite 56x54 RED_32: -1976912490
+      Deer Sprite 56x54 RED_35: -883670178
+      Deer Sprite 56x54 RED_17: 1260678190
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

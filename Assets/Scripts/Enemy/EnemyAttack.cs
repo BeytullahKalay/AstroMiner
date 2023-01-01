@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
@@ -7,11 +8,12 @@ public class EnemyAttack : MonoBehaviour
 
     private float _lastAttackTime = float.MinValue;
 
-    public void Attack(EnemyState state)
+    public void Attack(EnemyState state,Action attackAnimationAction)
     {
         if (state == EnemyState.Attack && Time.time > _lastAttackTime)
         {
-            Debug.Log("Enemy Attack");
+            attackAnimationAction?.Invoke();
+            Debug.Log("Enemy Dear Attack");
             _lastAttackTime = Time.time + 1/attackAmountInOneSecond;
         }
     }
