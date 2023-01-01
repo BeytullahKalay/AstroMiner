@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="add: sprite flip">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuJAM/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAnimationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyFlip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyFlip.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTweenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyTweenController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="810dc920-31c2-44ce-b45a-9587ed3e89e7" name="Changes" comment="add: capsule health and flip sprite feature" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,14 +155,7 @@
       <workItem from="1672523114831" duration="3814000" />
       <workItem from="1672557690062" duration="1222000" />
       <workItem from="1672578355195" duration="156000" />
-      <workItem from="1672578835195" duration="12357000" />
-    </task>
-    <task id="LOCAL-00006" summary="started: implementing fog open feature">
-      <created>1670870383267</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1670870383267</updated>
+      <workItem from="1672578835195" duration="12714000" />
     </task>
     <task id="LOCAL-00007" summary="modified: SampleScene.unity">
       <created>1670870392549</created>
@@ -509,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672589797098</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="add: capsule health and flip sprite feature">
+      <created>1672597799705</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1672597799705</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,7 +522,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add: started upgrade system" />
     <MESSAGE value="add: panel actions, player values changes feature and add namespaces" />
     <MESSAGE value="fixed: detecting last interact bug" />
     <MESSAGE value="add: orb collect move animation" />
@@ -556,6 +546,7 @@
     <MESSAGE value="add: deer enemy and hit animations" />
     <MESSAGE value="add: killing enemy dear feature and add killed animation" />
     <MESSAGE value="add: sprite flip" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: sprite flip" />
+    <MESSAGE value="add: capsule health and flip sprite feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: capsule health and flip sprite feature" />
   </component>
 </project>
