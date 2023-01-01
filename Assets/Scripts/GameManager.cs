@@ -1,3 +1,4 @@
+using Cinemachine;
 using SCOB.RockTypeHolder;
 using SCOB.TileSpriteHolder;
 using SCOB.UISpriteDecider;
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TileSpriteHolder tileSpriteHolder;
     [SerializeField] private UISpriteHolder uiSpriteHolder;
 
+    [SerializeField] private CinemachineVirtualCamera warCam;
+
     public RockMaterial GetMaterial(RockType rockType)
     {
         return rockTypeHolder.GetRockMaterial(rockType);
@@ -42,4 +45,6 @@ public class GameManager : MonoBehaviour
     {
         return uiSpriteHolder;
     }
+
+    public CinemachineVirtualCamera WarCam => warCam;
 }

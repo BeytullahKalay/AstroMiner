@@ -8,7 +8,14 @@ namespace Enemy
 
         public void CheckFlip(float direction)
         {
-            spriteRenderer.flipX = direction < 0 ? true : false;
+            if (direction > 0)
+            {
+                spriteRenderer.transform.rotation = Quaternion.Euler(Vector3.zero);
+            }
+            else
+            {
+                spriteRenderer.transform.rotation = Quaternion.Euler(Vector3.up * 180);
+            }
         }
     }
 }

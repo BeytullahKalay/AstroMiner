@@ -1,4 +1,5 @@
 using System;
+using Capsule;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
@@ -8,12 +9,13 @@ public class EnemyAttack : MonoBehaviour
 
     private float _lastAttackTime = float.MinValue;
 
-    public void Attack(EnemyState state,Action attackAnimationAction)
+    public void Attack(EnemyState state, Action attackAnimationAction)
     {
         if (state == EnemyState.Attack && Time.time > _lastAttackTime)
         {
             attackAnimationAction?.Invoke();
-            _lastAttackTime = Time.time + 1/attackAmountInOneSecond;
+            CapsuleHealth.Instance.TakeDamage(damage);
+            _lastAttackTime = Time.time + 1 / attackAmountInOneSecond;
         }
     }
 }
