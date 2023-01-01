@@ -6,9 +6,10 @@ namespace Bullet
     {
         [SerializeField] private float bulletMoveSpeed = 20f;
 
-        // private void Update()
-        // {
-        //     transform.position += Vector3.right * (bulletMoveSpeed * Time.deltaTime);
-        // }
+        private void FixedUpdate()
+        {
+            transform.Translate(Vector3.up * (bulletMoveSpeed * Time.fixedDeltaTime));
+        }
+        
     }
 }

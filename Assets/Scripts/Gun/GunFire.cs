@@ -21,7 +21,7 @@ namespace Gun
             {
                 Debug.Log("Fire!!");
 
-                Instantiate(bullet, firePoint.position, Quaternion.identity);
+                Instantiate(bullet, firePoint.position, firePoint.rotation);
 
                 _lastFireTime = Time.time + 1 / fireAmountInOneSeconds;
             }
