@@ -1,14 +1,11 @@
-using Unity.Mathematics;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-   public GameObject enemy;
-   private void Update()
+   [SerializeField] private GameObject enemy;
+
+   private void SpawnWave()
    {
-      if (Input.GetKeyDown(KeyCode.A))
-      {
-         Instantiate(enemy, transform.position, quaternion.identity);
-      }
+      //Instantiate(enemy, transform.position, quaternion.identity);
    }
 }
